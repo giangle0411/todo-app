@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 const TaskList = (props) => {
-  const td = JSON.stringify(props.todos);
-  console.log({ td });
+  const td = JSON.stringify(props.todos)
+  console.log({ td })
 
   const listTodos = props.todos.map((task) => (
     <div className="round" key={task.id}>
@@ -16,8 +16,8 @@ const TaskList = (props) => {
         </li>
       </ul>
     </div>
-  ));
-  return <div>{listTodos}</div>;
-};
+  ))
+  return <div>{listTodos}</div>
+}
 
-export default TaskList;
+export default TaskList

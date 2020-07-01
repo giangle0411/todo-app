@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import AppHeader from "./AppHeader/AppHeader";
-import AppBody from "./AppBody/AppBody";
-import todo from "../apis/todo";
+import React, { Component } from 'react'
+import AppHeader from './AppHeader/AppHeader'
+import AppBody from './AppBody/AppBody'
+import todo from '../todo'
 
 export default class App extends Component {
-  state = { todos: todo };
+  state = { todos: todo }
 
   render() {
     return (
@@ -13,6 +13,6 @@ export default class App extends Component {
         <AppHeader />
         <AppBody todos={this.state.todos} />
       </div>
-    );
+    )
   }
 }

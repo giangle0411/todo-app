@@ -1,0 +1,51 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "name": "Eating noddles",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "name": "Go to grocery",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "name": "Watching Netflix",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "name": "Doing some coding",
+      "completed": true
+    },
+    {
+      "name": "this",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "name": "this is the 6th",
+      "completed": false,
+      "id": 6
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Homework",
+      "color": "#38C9FF"
+    },
+    {
+      "id": 2,
+      "name": "Assignment",
+      "completed": "#FFAB38"
+    },
+    {
+      "id": 3,
+      "name": "Work",
+      "completed": "#FF3838"
+    }
+  ]
+}
