@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchTodos, editTodo } from '../../actions'
+import { fetchTodos, editTodo, deleteTodo } from '../../actions'
+import TodoItem from './TodoItem'
 
 class TodoList extends Component {
   componentDidMount() {
@@ -11,10 +12,18 @@ class TodoList extends Component {
 
   renderList() {
     return this.props.todos.map((todo) => {
-      const check = todo.completed
-      console.log(check)
+  
       return (
-        <div key={todo.id}>
+        <TodoItem key={todo.id} todoItem={todo} />
+      )
+    })
+  }
+
+  renderCompleted() {
+    return this.props.todos.map((todo) => {
+      if (todo.completed === true) {
+        const check = todo.completed
+        return (<div key={todo.id}>
           <ul className="list-group-flush">
             <li className="list-group-item">
               <input
@@ -22,18 +31,19 @@ class TodoList extends Component {
                 type="checkbox"
                 value={todo.completed}
                 checked={todo.completed}
-                onChange={(e) => this.setState({})}
+                onChange={(e) => this.props.editTodo(todo.id, {"completed": !check})}
               />
               {todo.name}
 
-              <button className="btn-xs btn-primary">Delete</button>
+              <button className="btn-xs btn-primary" onClick={e=> this.props.deleteTodo(todo.id)} >Delete</button>
             </li>
           </ul>
-        </div>
-      )
+        </div>)
+      }
+      return null
     })
   }
-
+  
   render() {
     return <div>{this.renderList()}</div>
   }
@@ -44,4 +54,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchTodos, editTodo })(TodoList)
+export default connect(mapStateToProps, { fetchTodos, editTodo, deleteTodo })(TodoList)
