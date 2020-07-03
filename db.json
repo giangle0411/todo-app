@@ -7,7 +7,7 @@
     },
     {
       "name": "Going to grocery",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
@@ -21,24 +21,9 @@
       "completed": true
     },
     {
-      "name": "this",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "name": "this is the 6th",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "name": "more more",
-      "completed": false,
-      "id": 7
-    },
-    {
       "name": "hello",
       "completed": false,
-      "id": 8
+      "id": 5
     }
   ],
   "category": [

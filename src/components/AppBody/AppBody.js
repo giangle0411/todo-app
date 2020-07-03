@@ -6,7 +6,7 @@ const AppBody = (props) => {
   return (
     <div>
       <AddNewTodo />
-      <TodoList todos={props.todos} />
+      <TodoList />
     </div>
   )
 }
