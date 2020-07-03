@@ -7,13 +7,13 @@
     },
     {
       "name": "Going to grocery",
-      "completed": true,
+      "completed": false,
       "id": 2
     },
     {
       "id": 3,
       "name": "Watching Netflix",
-      "completed": false
+      "completed": true
     },
     {
       "id": 4,
