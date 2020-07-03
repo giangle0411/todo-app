@@ -1,5 +1,11 @@
 import todo from '../apis/todos'
-import { CREATE_TODO, FETCH_TODOS, DELETE_TODO, EDIT_TODO } from './types'
+import {
+  CREATE_TODO,
+  FETCH_TODOS,
+  DELETE_TODO,
+  EDIT_TODO,
+  SET_COMPLETED,
+} from './types'
 
 export const createTodo = (formValues) => async (dispatch) => {
   const completed = false
@@ -13,7 +19,7 @@ export const fetchTodos = () => async (dispatch) => {
 }
 
 export const editTodo = (id, formValues) => async (dispatch) => {
-  const response = await todo.put(`/todo/${id}`, formValues)
+  const response = await todo.patch(`/todo/${id}`, formValues)
   dispatch({ type: EDIT_TODO, payload: response.data })
 }
 
@@ -21,3 +27,8 @@ export const deleteTodo = (id) => async (dispatch) => {
   await todo.delete(`/todo/${id}`)
   dispatch({ type: DELETE_TODO, payload: id })
 }
+
+export const setCompleted = (option) => ({
+  type: SET_COMPLETED,
+  payload: option,
+})

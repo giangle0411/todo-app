@@ -1,12 +1,12 @@
 import React from 'react'
-import TaskList from './TaskList'
+import TodoList from './TodoList'
 import AddNewTodo from './AddNewTodo'
 
 const AppBody = (props) => {
   return (
     <div>
       <AddNewTodo />
-      <TaskList todos={props.todos} />
+      <TodoList todos={props.todos} />
     </div>
   )
 }
