@@ -4,7 +4,10 @@ import {
   FETCH_TODOS,
   DELETE_TODO,
   EDIT_TODO,
-  SET_COMPLETED,
+  CREATE_CATEGORY,
+  FETCH_CATEGORIES,
+  DELETE_CATEGORY,
+  EDIT_CATEGORY,
 } from './types'
 
 export const createTodo = (formValues) => async (dispatch) => {
@@ -28,7 +31,23 @@ export const deleteTodo = (id) => async (dispatch) => {
   dispatch({ type: DELETE_TODO, payload: id })
 }
 
-export const setCompleted = (option) => ({
-  type: SET_COMPLETED,
-  payload: option,
-})
+export const createCategory = (formValues) => async (dispatch) => {
+  const completed = false
+  const response = await todo.post('/category', { ...formValues, completed })
+  dispatch({ type: CREATE_CATEGORY, payload: response.data })
+}
+
+export const fetchCategories = () => async (dispatch) => {
+  const response = await todo.get('/category')
+  dispatch({ type: FETCH_CATEGORIES, payload: response.data })
+}
+
+export const editCategory = (id, formValues) => async (dispatch) => {
+  const response = await todo.patch(`/category/${id}`, formValues)
+  dispatch({ type: EDIT_CATEGORY, payload: response.data })
+}
+
+export const deleteCategory = (id) => async (dispatch) => {
+  await todo.delete(`/category/${id}`)
+  dispatch({ type: DELETE_CATEGORY, payload: id })
+}

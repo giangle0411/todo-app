@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Eating noddles",
-      "completed": true
+      "completed": false
     },
     {
       "name": "Going to grocery",
@@ -21,9 +21,14 @@
       "completed": true
     },
     {
-      "name": "hello",
-      "completed": false,
+      "name": "Another thing to do, but what is it?",
+      "completed": true,
       "id": 5
+    },
+    {
+      "name": "You are not hungry",
+      "completed": true,
+      "id": 6
     }
   ],
   "category": [
@@ -35,12 +40,12 @@
     {
       "id": 2,
       "name": "Assignment",
-      "completed": "#FFAB38"
+      "color": "#FFAB38"
     },
     {
       "id": 3,
       "name": "Work",
-      "completed": "#FF3838"
+      "color": "#FF3838"
     }
   ]
 }

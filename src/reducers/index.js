@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
-import todosReducer from './todosReducer'
+import todoReducer from './todoReducer'
+import categoryReducer from './categoryReducer'
 
 export default combineReducers({
   form: formReducer,
-  todos: todosReducer,
+  todos: todoReducer,
+  categories: categoryReducer,
 })

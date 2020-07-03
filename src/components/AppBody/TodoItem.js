@@ -4,8 +4,7 @@ import { editTodo, deleteTodo } from '../../actions'
 
 const TodoItem = (props) => {
   const check = props.todoItem.completed
-  console.log(check)
-  console.log(props)
+
   return (
     <div>
       <ul className="list-group-flush">

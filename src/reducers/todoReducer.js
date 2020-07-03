@@ -4,7 +4,6 @@ import {
   FETCH_TODOS,
   DELETE_TODO,
   EDIT_TODO,
-  SET_COMPLETED,
 } from '../actions/types'
 
 export default (state = {}, action) => {
@@ -17,8 +16,6 @@ export default (state = {}, action) => {
       return { ...state, [action.payload.id]: action.payload }
     case DELETE_TODO:
       return _.omit(state, action.payload)
-    case SET_COMPLETED:
-      return { ...state, completed: !state.completed }
     default:
       return state
   }

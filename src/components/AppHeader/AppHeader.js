@@ -1,11 +1,15 @@
-import React from "react";
-
+import React from 'react'
+import CategoryList from './CategoryList'
+import ProgressBar from './ProgressBar'
 const AppHeader = () => {
   return (
-    <div>
+    <div className="container">
       <h1>To-do List</h1>
-    </div>
-  );
-};
+      <CategoryList />
 
-export default AppHeader;
+      <ProgressBar />
+    </div>
+  )
+}
+
+export default AppHeader

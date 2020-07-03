@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchTodos, editTodo, deleteTodo } from '../../actions'
+import { fetchTodos } from '../../actions'
 import TodoItem from './TodoItem'
 import AppFooter from '../AppFooter'
 
@@ -41,10 +41,16 @@ class TodoList extends Component {
   }
 
   render() {
+    const allTodos = this.props.todos
+    const todosLeft = allTodos.filter((t) => t.completed === false)
+
     return (
       <div>
         {this.renderComponent()}
-        <AppFooter showComponent={this.showComponent} />
+        <AppFooter
+          showComponent={this.showComponent}
+          todosLeft={todosLeft.length}
+        />
       </div>
     )
   }
@@ -55,6 +61,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchTodos, editTodo, deleteTodo })(
-  TodoList
-)
+export default connect(mapStateToProps, { fetchTodos })(TodoList)

@@ -6,7 +6,7 @@ import TodoList from './AppBody/TodoList'
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <AppHeader />
         <AddNewTodo />
         <TodoList />

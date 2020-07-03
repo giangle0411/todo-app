@@ -1,0 +1,31 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar button {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar button:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  div.inline { display: inline-block };
+
+ 

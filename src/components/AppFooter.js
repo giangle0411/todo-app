@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Button } from 'reactstrap'
 export default class AppFooter extends Component {
   clickMe = (component) => {
     this.props.showComponent(component)
@@ -8,13 +8,16 @@ export default class AppFooter extends Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.clickMe('TodoList')}>TodoList</button>
-        <button onClick={() => this.clickMe('CompletedTodos')}>
-          CompletedTodos
-        </button>
-        <button onClick={() => this.clickMe('NotCompletedTodos')}>
-          NotCompletedTodos
-        </button>
+        <nav className="navbar fixed-bottom navbar-light bg-light">
+          <div>{this.props.todosLeft} tasks left</div>
+          <Button onClick={() => this.clickMe('TodoList')}>TodoList</Button>
+          <Button onClick={() => this.clickMe('CompletedTodos')}>
+            CompletedTodos
+          </Button>
+          <Button onClick={() => this.clickMe('NotCompletedTodos')}>
+            NotCompletedTodos
+          </Button>
+        </nav>
       </div>
     )
   }
