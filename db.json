@@ -43,15 +43,13 @@
       "color": "#FF3838"
     },
     {
-      "color": "#e07b39",
-      "name": "aaaa",
-      "completed": false,
+      "name": "AAAAA",
+      "color": "orange",
       "id": 4
     },
     {
-      "name": "aaxczczx",
-      "color": "#04417a",
-      "completed": false,
+      "color": "black",
+      "name": "aaaa",
       "id": 5
     }
   ]

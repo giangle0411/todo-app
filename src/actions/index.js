@@ -32,8 +32,7 @@ export const deleteTodo = (id) => async (dispatch) => {
 }
 
 export const createCategory = (formValues) => async (dispatch) => {
-  const completed = false
-  const response = await todo.post('/category', { ...formValues, completed })
+  const response = await todo.post('/category', { ...formValues })
   dispatch({ type: CREATE_CATEGORY, payload: response.data })
 }
 
