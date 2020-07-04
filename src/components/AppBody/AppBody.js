@@ -2,9 +2,9 @@ import React from 'react'
 import TodoList from './TodoList'
 import AddNewTodo from './AddNewTodo'
 
-const AppBody = (props) => {
+const AppBody = () => {
   return (
-    <div>
+    <div className="container">
       <AddNewTodo />
       <TodoList />
     </div>

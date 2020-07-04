@@ -21,13 +21,6 @@ const TodoItem = (props) => {
           />
           {props.todoItem.name}
 
-          {/* <button
-            className="btn-xs btn-primary"
-            onClick={(e) => props.deleteTodo(props.todoItem.id)}
-          >
-            Delete
-          </button> */}
-
           <DeleteTodo id={props.todoItem.id} />
         </li>
       </ul>

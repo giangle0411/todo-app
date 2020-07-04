@@ -3,17 +3,17 @@
     {
       "id": 1,
       "name": "Eating noddles",
-      "completed": false
+      "completed": true
     },
     {
       "name": "Going to grocery",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "id": 3,
       "name": "Watching Netflix",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
@@ -21,7 +21,7 @@
       "completed": true
     },
     {
-      "name": "Another thing to do, but what is it?",
+      "name": "O kia",
       "completed": true,
       "id": 5
     }
@@ -41,6 +41,18 @@
       "id": 3,
       "name": "Work",
       "color": "#FF3838"
+    },
+    {
+      "color": "#e07b39",
+      "name": "aaaa",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "name": "aaxczczx",
+      "color": "#04417a",
+      "completed": false,
+      "id": 5
     }
   ]
 }

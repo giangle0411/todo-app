@@ -12,10 +12,8 @@ class ProgressBar extends Component {
     const completed = allTodos.filter((t) => t.completed === true)
     const percentage = (completed.length / allTodos.length) * 100
 
-    console.log(percentage)
-
     const containerStyles = {
-      height: 20,
+      height: 50,
       width: '100%',
       backgroundColor: '#00000',
       marginTop: 20,
@@ -33,7 +31,8 @@ class ProgressBar extends Component {
     const labelStyles = {
       padding: 5,
       color: 'white',
-      fontWeight: 'bold',
+      fontWeight: 'semiBold',
+      verticalAlign: 'middle',
     }
     return (
       <div style={containerStyles}>
