@@ -24,11 +24,6 @@
       "name": "Another thing to do, but what is it?",
       "completed": true,
       "id": 5
-    },
-    {
-      "name": "You are not hungry",
-      "completed": true,
-      "id": 6
     }
   ],
   "category": [

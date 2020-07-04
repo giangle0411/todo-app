@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { editTodo, deleteTodo } from '../../actions'
+import DeleteTodo from './DeleteTodo'
 
 const TodoItem = (props) => {
   const check = props.todoItem.completed
@@ -20,12 +21,14 @@ const TodoItem = (props) => {
           />
           {props.todoItem.name}
 
-          <button
+          {/* <button
             className="btn-xs btn-primary"
             onClick={(e) => props.deleteTodo(props.todoItem.id)}
           >
             Delete
-          </button>
+          </button> */}
+
+          <DeleteTodo id={props.todoItem.id} />
         </li>
       </ul>
     </div>
