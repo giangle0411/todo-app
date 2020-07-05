@@ -43,14 +43,9 @@
       "color": "#FF3838"
     },
     {
-      "name": "AAAAA",
+      "name": "BBBB",
       "color": "orange",
       "id": 4
-    },
-    {
-      "color": "black",
-      "name": "aaaa",
-      "id": 5
     }
   ]
 }

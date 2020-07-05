@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { reset, Field, reduxForm } from 'redux-form'
+import { reset } from 'redux-form'
 import { connect } from 'react-redux'
 import { createCategory } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
 import { Button } from 'reactstrap'
+import CategoryForm from './CategoryForm'
 
 class AddNewCategory extends Component {
   state = { show: false }
@@ -14,16 +15,7 @@ class AddNewCategory extends Component {
 
   handleClose = (dispatch) => {
     this.setState({ show: false })
-    this.props.dispatch(reset('newCategory'))
-  }
-
-  renderNewCategoryInput = ({ input, label }) => {
-    return (
-      <div className="field">
-        <label>{label}</label>
-        <input className="form-control" {...input} />
-      </div>
-    )
+    reset('newCategory')
   }
 
   onSubmit = (formValues, dispatch) => {
@@ -39,27 +31,7 @@ class AddNewCategory extends Component {
         </Button>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Body>
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-              <div className="form-group">
-                <Field
-                  name="name"
-                  component={this.renderNewCategoryInput}
-                  label="Category name"
-                />
-                <Field
-                  name="color"
-                  component={this.renderNewCategoryInput}
-                  label="Category color"
-                />
-                <button
-                  type="submit"
-                  disabled={this.props.pristine}
-                  className="btn btn-primary"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+            <CategoryForm onSubmit={this.onSubmit} />
           </Modal.Body>
         </Modal>
       </div>
@@ -67,21 +39,4 @@ class AddNewCategory extends Component {
   }
 }
 
-const validate = (formValues) => {
-  const errors = {}
-  if (!formValues.name) {
-    errors.name = 'You have not put in any new category'
-  }
-  if (!formValues.color) {
-    errors.name = 'You have not put in any category color'
-  }
-
-  return errors
-}
-
-const formWrap = reduxForm({
-  form: 'newCategory',
-  validate,
-})(AddNewCategory)
-
-export default connect(null, { createCategory })(formWrap)
+export default connect(null, { createCategory })(AddNewCategory)
