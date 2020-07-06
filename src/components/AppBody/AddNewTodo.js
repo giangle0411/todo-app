@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
 import { reset, Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import { createTodo, fetchCategories } from '../../actions'
+import {
+  editTodo,
+  createTodo,
+  fetchCategories,
+  fetchTodos,
+} from '../../actions'
 import Modal from 'react-bootstrap/Modal'
 import { Button } from 'reactstrap'
+import AddNewCategory from '../AppHeader/AddNewCategory'
 
 class AddNewTodo extends Component {
-  state = { show: false, cat: null }
+  state = { show: false, category: null, categoryColor: null }
 
   handleShow = () => {
     this.setState({ show: !this.state.show })
   }
 
-  setCat = (category) => {
-    this.setState({ cat: category })
+  setCat = (category, categoryColor) => {
+    this.setState({ category, categoryColor })
     this.setState({ show: !this.state.show })
   }
 
@@ -31,12 +37,14 @@ class AddNewTodo extends Component {
     return this.props.categories.map((cat) => {
       return (
         <Button
+          name="category"
+          value={cat.name}
           key={cat.id}
           style={{
             backgroundColor: `${cat.color}`,
             color: 'white',
           }}
-          onClick={(e) => this.setCat(cat.name)}
+          onClick={(e) => this.setCat(cat.name, cat.color)}
         >
           {cat.name}
         </Button>
@@ -45,48 +53,36 @@ class AddNewTodo extends Component {
   }
 
   onSubmit = (formValues, dispatch) => {
-    this.props.createTodo(formValues)
-    dispatch(reset('newTodo'))
-  }
+    this.props.createTodo(formValues, this.state.category)
 
-  renderCatButton(props) {
-    return this.props.categories.map((cat) => {
-      if (cat.name === this.state.cat) {
-        return (
-          <div className="btn" style={{ backgroundColor: `${cat.color}` }}>
-            {this.state.cat}
-          </div>
-        )
-      }
-      return <div className="btn"></div>
-    })
+    dispatch(reset('newTodo'))
   }
 
   render() {
     console.log(this.state)
     console.log(this.props.categories)
+    console.log(this.props.todos[this.props.todos.length - 1])
     return (
       <div>
-        <Button className="primary" onClick={this.handleShow}>
-          {this.state.cat}
-        </Button>
-
+        <Button
+          className="primary"
+          style={{ backgroundColor: `${this.state.categoryColor}` }}
+          onClick={this.handleShow}
+          value={this.state.categoryColor}
+        ></Button>
         <div className="inline form-group ml-2 w-75">
           <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
             <Modal show={this.state.show} onHide={this.handleShow} centered>
-              <Modal.Body>{this.renderCategoryOption()}</Modal.Body>
+              <Modal.Body>
+                {this.renderCategoryOption()}
+                <AddNewCategory />
+              </Modal.Body>
             </Modal>
             <Field
               name="name"
               component={this.renderNameInput}
               placeholder="What's needed to be done?"
             />
-            <Field
-              name="category"
-              component={this.renderNameInput}
-              placeholder="What's category"
-            />
-            <Button>Submit</Button>
           </form>
         </div>
       </div>
@@ -106,6 +102,8 @@ const validate = (formValues) => {
 const mapStateToProps = (state) => {
   return {
     categories: Object.values(state.categories),
+    todos: Object.values(state.todos),
+    initialValues: { category: state.category },
   }
 }
 
@@ -114,6 +112,9 @@ const formWrap = reduxForm({
   validate,
 })(AddNewTodo)
 
-export default connect(mapStateToProps, { createTodo, fetchCategories })(
-  formWrap
-)
+export default connect(mapStateToProps, {
+  createTodo,
+  fetchCategories,
+  fetchTodos,
+  editTodo,
+})(formWrap)

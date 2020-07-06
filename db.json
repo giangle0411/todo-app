@@ -18,13 +18,33 @@
     {
       "id": 4,
       "name": "Doing some coding",
-      "completed": false
+      "completed": false,
+      "category": "Work"
     },
     {
-      "name": "aaa",
-      "category": "bbb",
+      "name": "work work work work work",
       "completed": false,
       "id": 5
+    },
+    {
+      "category": {
+        "cattt": null
+      },
+      "name": "Đậu xanh",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "category": "Assignment",
+      "name": "aaaaa",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "category": "Work",
+      "name": "Oi troi oi",
+      "completed": false,
+      "id": 8
     }
   ],
   "category": [
