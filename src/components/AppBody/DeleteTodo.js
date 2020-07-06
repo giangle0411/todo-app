@@ -17,15 +17,22 @@ class DeleteTodo extends Component {
         <Button variant="primary" onClick={this.handleShow}>
           Delete
         </Button>
-        <Modal show={this.state.show} onHide={this.handleShow} centered>
+        <Modal
+          dialogClassName="modal-size"
+          show={this.state.show}
+          onHide={this.handleShow}
+          centered
+        >
           <Modal.Body>
-            <Button
-              className="mr-3"
-              variant="secondary"
-              onClick={this.handleShow}
-            >
-              Close
-            </Button>
+            <div>
+              <Button
+                className="mr-3"
+                variant="secondary"
+                onClick={this.handleShow}
+              >
+                Close
+              </Button>
+            </div>
             <Button
               variant="primary"
               onClick={(e) => this.props.deleteTodo(this.props.id)}

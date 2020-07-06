@@ -10,11 +10,14 @@ import {
   EDIT_CATEGORY,
 } from './types'
 
-export const createTodo = (formValues, category) => async (dispatch) => {
+export const createTodo = (formValues, category, categoryColor) => async (
+  dispatch
+) => {
   const completed = false
   const response = await todo.post('/todo', {
     ...formValues,
     category,
+    categoryColor,
     completed,
   })
   dispatch({ type: CREATE_TODO, payload: response.data })

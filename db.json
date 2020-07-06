@@ -1,50 +1,53 @@
 {
   "todo": [
     {
-      "id": 1,
-      "name": "Eating noddles",
-      "completed": true
+      "name": "Eat some noodles",
+      "category": "Homework",
+      "categoryColor": "#38C9FF",
+      "completed": true,
+      "id": 1
     },
     {
-      "name": "Going to grocery",
+      "name": "Watching Netflix",
+      "category": null,
+      "categoryColor": null,
       "completed": true,
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Watching Netflix",
-      "completed": true
+      "name": "Do some coding",
+      "category": "Self Management",
+      "categoryColor": "#e342f5",
+      "completed": true,
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "Doing some coding",
-      "completed": false,
-      "category": "Work"
+      "name": "Go to grocery",
+      "category": "Others",
+      "categoryColor": "#42f59e",
+      "completed": true,
+      "id": 4
     },
     {
-      "name": "work work work work work",
-      "completed": false,
+      "name": "Continue working on the assignment",
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
+      "completed": true,
       "id": 5
     },
     {
-      "category": {
-        "cattt": null
-      },
-      "name": "Đậu xanh",
-      "completed": false,
+      "name": "BTVN",
+      "category": "Homework",
+      "categoryColor": "#38C9FF",
+      "completed": true,
       "id": 6
     },
     {
-      "category": "Assignment",
-      "name": "aaaaa",
+      "name": "task left",
+      "category": null,
+      "categoryColor": null,
       "completed": false,
       "id": 7
-    },
-    {
-      "category": "Work",
-      "name": "Oi troi oi",
-      "completed": false,
-      "id": 8
     }
   ],
   "category": [
@@ -65,8 +68,18 @@
     },
     {
       "name": "BBBB",
-      "color": "blue",
+      "color": "indigo",
       "id": 4
+    },
+    {
+      "name": "Others",
+      "color": "#42f59e",
+      "id": 5
+    },
+    {
+      "name": "Self Management",
+      "color": "#e342f5",
+      "id": 6
     }
   ]
 }

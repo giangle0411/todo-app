@@ -1,3 +1,14 @@
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+.heading {
+  font-weight: 700;
+}
+.subheading {
+  font-weight: 300;
+}
+
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -34,4 +45,40 @@
 
   .cat-mg {
     margin-right: 13px;
+  }
+
+  .modal-content {
+    width: 325px !important;
+    height: 325px;
+    
+  }
+
+  .container-mdm {
+    width: 100%;
+    max-width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+
+  .todo-list {
+    margin-bottom: 50px;
+  }
+
+  .navbar {
+    height: 50px;
+    max-width: 768px;
+    margin: auto;
+    display: inline-block;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #00000029;
+  }
+
+  .todos-left {
+    margin-left: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #F77062;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }

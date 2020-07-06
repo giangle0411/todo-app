@@ -3,9 +3,9 @@ import { Button } from 'reactstrap'
 export default class AppFooter extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar fixed-bottom navbar-light bg-light">
-          <div>{this.props.todosLeft} tasks left</div>
+      <div className="container-mdm">
+        <nav className="navbar fixed-bottom navbar-light bg-light align-self-center">
+          <div className="todos-left">{this.props.todosLeft} tasks left</div>
           <Button onClick={() => this.props.showComponent('TodoList')}>
             ALL
           </Button>

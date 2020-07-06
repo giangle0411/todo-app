@@ -45,12 +45,12 @@ class TodoList extends Component {
     const todosLeft = allTodos.filter((t) => t.completed === false)
 
     return (
-      <div>
-        {this.renderComponent()}
+      <div className="todo-list">
         <AppFooter
           showComponent={this.showComponent}
           todosLeft={todosLeft.length}
         />
+        {this.renderComponent()}
       </div>
     )
   }

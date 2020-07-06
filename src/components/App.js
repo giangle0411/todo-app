@@ -5,7 +5,7 @@ import AppBody from './AppBody/AppBody'
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-mdm">
         <AppHeader />
         <AppBody />
       </div>
