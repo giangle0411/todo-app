@@ -13,16 +13,17 @@
     {
       "id": 3,
       "name": "Watching Netflix",
-      "completed": false
+      "completed": true
     },
     {
       "id": 4,
       "name": "Doing some coding",
-      "completed": true
+      "completed": false
     },
     {
-      "name": "O kia",
-      "completed": true,
+      "name": "aaa",
+      "category": "bbb",
+      "completed": false,
       "id": 5
     }
   ],
@@ -44,7 +45,7 @@
     },
     {
       "name": "BBBB",
-      "color": "orange",
+      "color": "blue",
       "id": 4
     }
   ]

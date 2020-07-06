@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import TodoList from './TodoList'
 import AddNewTodo from './AddNewTodo'
 
-const AppBody = () => {
-  return (
-    <div className="container">
-      <AddNewTodo />
-      <TodoList />
-    </div>
-  )
+export default class AppBody extends Component {
+  render() {
+    return (
+      <div className="container mt-3">
+        <AddNewTodo />
+        <TodoList />
+      </div>
+    )
+  }
 }
-
-export default AppBody

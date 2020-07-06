@@ -23,12 +23,11 @@ class CategoryItem extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="inline">
         <button
           type="button"
-          className="btn"
+          className="btn cat-mg"
           onClick={this.handleShow}
           style={{
             backgroundColor: `${this.props.catItem.color}`,
@@ -37,7 +36,7 @@ class CategoryItem extends Component {
         >
           {this.props.catItem.name}
         </button>
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
             <CategoryForm
               onSubmit={this.onSubmit}

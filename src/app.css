@@ -26,5 +26,12 @@
     color: white;
   }
 
-  div.inline { display: inline-block };
+  .inline { display: inline-block };
 
+  .input-align {
+    float: right
+  }
+
+  .cat-mg {
+    margin-right: 13px;
+  }

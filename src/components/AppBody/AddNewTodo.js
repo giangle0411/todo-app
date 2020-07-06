@@ -1,19 +1,47 @@
 import React, { Component } from 'react'
 import { reset, Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import { createTodo } from '../../actions'
+import { createTodo, fetchCategories } from '../../actions'
+import Modal from 'react-bootstrap/Modal'
+import { Button } from 'reactstrap'
 
 class AddNewTodo extends Component {
-  renderNewTodoInput = ({ input, placeholder }) => {
+  state = { show: false, cat: null }
+
+  handleShow = () => {
+    this.setState({ show: !this.state.show })
+  }
+
+  setCat = (category) => {
+    this.setState({ cat: category })
+    this.setState({ show: !this.state.show })
+  }
+
+  renderNameInput = ({ input, placeholder }) => {
     return (
-      <div className="field">
-        <input
-          className="form-control-plaintext"
-          placeholder={placeholder}
-          {...input}
-        />
-      </div>
+      <input
+        className="form-control-plaintext input-align"
+        placeholder={placeholder}
+        {...input}
+      />
     )
+  }
+
+  renderCategoryOption = () => {
+    return this.props.categories.map((cat) => {
+      return (
+        <Button
+          key={cat.id}
+          style={{
+            backgroundColor: `${cat.color}`,
+            color: 'white',
+          }}
+          onClick={(e) => this.setCat(cat.name)}
+        >
+          {cat.name}
+        </Button>
+      )
+    })
   }
 
   onSubmit = (formValues, dispatch) => {
@@ -21,17 +49,47 @@ class AddNewTodo extends Component {
     dispatch(reset('newTodo'))
   }
 
+  renderCatButton(props) {
+    return this.props.categories.map((cat) => {
+      if (cat.name === this.state.cat) {
+        return (
+          <div className="btn" style={{ backgroundColor: `${cat.color}` }}>
+            {this.state.cat}
+          </div>
+        )
+      }
+      return <div className="btn"></div>
+    })
+  }
+
   render() {
+    console.log(this.state)
+    console.log(this.props.categories)
     return (
-      <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-        <div className="form-group">
-          <Field
-            name="name"
-            component={this.renderNewTodoInput}
-            placeholder="What's needed to be done?"
-          />
+      <div>
+        <Button className="primary" onClick={this.handleShow}>
+          {this.state.cat}
+        </Button>
+
+        <div className="inline form-group ml-2 w-75">
+          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+            <Modal show={this.state.show} onHide={this.handleShow} centered>
+              <Modal.Body>{this.renderCategoryOption()}</Modal.Body>
+            </Modal>
+            <Field
+              name="name"
+              component={this.renderNameInput}
+              placeholder="What's needed to be done?"
+            />
+            <Field
+              name="category"
+              component={this.renderNameInput}
+              placeholder="What's category"
+            />
+            <Button>Submit</Button>
+          </form>
         </div>
-      </form>
+      </div>
     )
   }
 }
@@ -45,9 +103,17 @@ const validate = (formValues) => {
   return errors
 }
 
+const mapStateToProps = (state) => {
+  return {
+    categories: Object.values(state.categories),
+  }
+}
+
 const formWrap = reduxForm({
   form: 'newTodo',
   validate,
 })(AddNewTodo)
 
-export default connect(null, { createTodo })(formWrap)
+export default connect(mapStateToProps, { createTodo, fetchCategories })(
+  formWrap
+)

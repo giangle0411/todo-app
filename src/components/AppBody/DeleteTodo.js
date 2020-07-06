@@ -17,7 +17,7 @@ class DeleteTodo extends Component {
         <Button variant="primary" onClick={this.handleShow}>
           Delete
         </Button>
-        <Modal show={this.state.show} onHide={this.handleShow}>
+        <Modal show={this.state.show} onHide={this.handleShow} centered>
           <Modal.Body>
             <Button
               className="mr-3"

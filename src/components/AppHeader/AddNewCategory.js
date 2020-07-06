@@ -29,9 +29,16 @@ class AddNewCategory extends Component {
         <Button variant="primary" onClick={this.handleShow}>
           +
         </Button>
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
             <CategoryForm onSubmit={this.onSubmit} />
+            <Button
+              className="mr-3"
+              variant="secondary"
+              onClick={this.handleShow}
+            >
+              Close
+            </Button>
           </Modal.Body>
         </Modal>
       </div>

@@ -51,6 +51,6 @@ const validate = (formValues) => {
 }
 
 export default reduxForm({
-  form: 'streamForm',
+  form: 'categoryForm',
   validate,
 })(CategoryForm)

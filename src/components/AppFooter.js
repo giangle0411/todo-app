@@ -7,13 +7,13 @@ export default class AppFooter extends Component {
         <nav className="navbar fixed-bottom navbar-light bg-light">
           <div>{this.props.todosLeft} tasks left</div>
           <Button onClick={() => this.props.showComponent('TodoList')}>
-            TodoList
-          </Button>
-          <Button onClick={() => this.props.showComponent('CompletedTodos')}>
-            CompletedTodos
+            ALL
           </Button>
           <Button onClick={() => this.props.showComponent('NotCompletedTodos')}>
-            NotCompletedTodos
+            ONGOING
+          </Button>
+          <Button onClick={() => this.props.showComponent('CompletedTodos')}>
+            COMPLETED
           </Button>
         </nav>
       </div>
