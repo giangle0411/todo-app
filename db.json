@@ -4,13 +4,13 @@
       "name": "Eat some noodles",
       "category": "Homework",
       "categoryColor": "#38C9FF",
-      "completed": true,
+      "completed": false,
       "id": 1
     },
     {
       "name": "Watching Netflix",
-      "category": null,
-      "categoryColor": null,
+      "category": "Others",
+      "categoryColor": "#42f59e",
       "completed": true,
       "id": 2
     },
@@ -25,7 +25,7 @@
       "name": "Go to grocery",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": true,
+      "completed": false,
       "id": 4
     },
     {
@@ -39,15 +39,8 @@
       "name": "BTVN",
       "category": "Homework",
       "categoryColor": "#38C9FF",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "name": "task left",
-      "category": null,
-      "categoryColor": null,
       "completed": false,
-      "id": 7
+      "id": 6
     }
   ],
   "category": [

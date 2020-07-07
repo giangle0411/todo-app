@@ -1,4 +1,3 @@
-
 h1 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -10,75 +9,144 @@ h1 {
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .navbar button {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .navbar button:hover {
-    background: #f1f1f1;
-    color: black;
-  }
-  
-  .navbar button.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
-  .inline { display: inline-block };
+.navbar button {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-  .input-align {
-    float: right
-  }
+.navbar button:hover {
+  background: #f1f1f1;
+  color: black;
+}
 
-  .cat-mg {
-    margin-right: 13px;
-  }
+.navbar button.active {
+  background-color: #4caf50;
+  color: white;
+}
 
-  .modal-content {
-    width: 325px !important;
-    height: 325px;
-    
-  }
+.checkbox-round {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 3px solid #707070;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
 
-  .container-mdm {
-    width: 100%;
-    max-width: 768px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-  }
+.checkbox-round:checked {
+  background-color: #f77062;
+}
+.inline {
+  display: inline-block;
+}
 
-  .todo-list {
-    margin-bottom: 50px;
-  }
+.input-align {
+  float: right;
+}
 
-  .navbar {
-    height: 50px;
-    max-width: 768px;
-    margin: auto;
-    display: inline-block;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 20px #00000029;
-  }
+.cat-mg {
+  margin-right: 13px;
+}
 
-  .todos-left {
-    margin-left: 45px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #F77062;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-  }
+.modal-content {
+  width: 325px !important;
+  height: 325px;
+}
+
+.container-mdm {
+  width: 100%;
+  max-width: 768px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0 auto;
+}
+
+.todo-list {
+  margin-bottom: 50px;
+}
+
+.navbar {
+  height: 50px;
+  max-width: 768px;
+  margin: auto;
+  display: inline-block;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000029;
+}
+
+.todos-left {
+  padding-left: 45px;
+  margin-left: 0px;
+  text-align: center;
+  color: #f77062;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20;
+}
+
+.todos-change {
+  right: 0;
+  display: inline-block;
+  height: 50px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20;
+  font-weight: 600;
+  color: #f77062;
+  outline: none;
+  border: none;
+}
+
+.navWrap {
+  margin-right: 45px;
+}
+
+.todo-item {
+  flex-basis: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.todo-list {
+}
+
+#todochange:hover,
+#todochange:focus {
+  background: #f77062;
+  cursor: pointer;
+  color: white;
+}
+
+.category-box {
+  height: 20px;
+  width: 20px;
+  border: 2.5px solid #707070;
+  display: inline-block;
+
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.bin {
+  height: 20px;
+  width: 20px;
+  background-color: teal;
+}

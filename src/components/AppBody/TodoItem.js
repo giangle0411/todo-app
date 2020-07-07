@@ -40,41 +40,41 @@ class TodoItem extends Component {
   render() {
     const task = this.props.todoItem
     return (
-      <div>
-        <ul className="list-group-flush">
-          <li className="list-group-item">
-            <input
-              className="mr-2"
-              type="checkbox"
-              value={task.completed}
-              checked={task.completed}
-              onChange={(e) =>
-                this.props.editTodo(task.id, {
-                  completed: !task.completed,
-                })
-              }
-            />
-            <Button
-              className="primary"
-              style={{ backgroundColor: `${task.categoryColor}` }}
-              onClick={this.handleShow}
-            ></Button>
-            <Modal
-              dialogClassName="modal-size"
-              show={this.state.show}
-              onHide={this.handleShow}
-              centered
-            >
-              <Modal.Body>
-                {this.renderCategoryOption()}
-                <AddNewCategory />
-              </Modal.Body>
-            </Modal>
-            {task.name}
+      <div class="todo-item">
+        <input
+          className="mr-2 checkbox-round"
+          type="checkbox"
+          value={task.completed}
+          checked={task.completed}
+          onChange={(e) =>
+            this.props.editTodo(task.id, {
+              completed: !task.completed,
+            })
+          }
+        />
+        <div
+          className="category-box"
+          style={{
+            backgroundColor: `${task.categoryColor}`,
+            border: `2.5px solid ${task.categoryColor}`,
+          }}
+          onClick={this.handleShow}
+        ></div>
 
-            <DeleteTodo id={task.id} />
-          </li>
-        </ul>
+        <Modal
+          dialogClassName="modal-size"
+          show={this.state.show}
+          onHide={this.handleShow}
+          centered
+        >
+          <Modal.Body>
+            {this.renderCategoryOption()}
+            <AddNewCategory />
+          </Modal.Body>
+        </Modal>
+        {task.name}
+
+        <DeleteTodo id={task.id} />
       </div>
     )
   }

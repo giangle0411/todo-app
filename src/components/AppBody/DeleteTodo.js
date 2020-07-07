@@ -14,9 +14,8 @@ class DeleteTodo extends Component {
   render() {
     return (
       <div className="inline ml-2">
-        <Button variant="primary" onClick={this.handleShow}>
-          Delete
-        </Button>
+        <div class="bin" onClick={this.handleShow}></div>
+
         <Modal
           dialogClassName="modal-size"
           show={this.state.show}
