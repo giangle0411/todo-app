@@ -4,7 +4,7 @@
       "name": "Eat some noodles",
       "category": "Homework",
       "categoryColor": "#38C9FF",
-      "completed": false,
+      "completed": true,
       "id": 1
     },
     {
@@ -29,18 +29,25 @@
       "id": 4
     },
     {
-      "name": "Continue working on the assignment",
-      "category": "BBBB",
-      "categoryColor": "indigo",
-      "completed": true,
-      "id": 5
-    },
-    {
       "name": "BTVN",
       "category": "Homework",
       "categoryColor": "#38C9FF",
       "completed": false,
       "id": 6
+    },
+    {
+      "name": "I dont know",
+      "category": null,
+      "categoryColor": null,
+      "completed": false,
+      "id": 7
+    },
+    {
+      "name": "Green",
+      "category": "Others",
+      "categoryColor": "#42f59e",
+      "completed": false,
+      "id": 8
     }
   ],
   "category": [

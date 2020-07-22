@@ -16,8 +16,8 @@ class TodoList extends Component {
   }
 
   renderComponent() {
-    switch (this.state.component) {
-      case 'TodoList':
+    switch (this.props.list) {
+      case 'AllTodos':
         return this.props.todos.map((todo) => {
           return <TodoItem key={todo.id} todoItem={todo} />
         })
@@ -28,7 +28,7 @@ class TodoList extends Component {
           }
           return null
         })
-      case 'NotCompletedTodos':
+      case 'IncompletedTodos':
         return this.props.todos.map((todo) => {
           if (todo.completed === false) {
             return <TodoItem key={todo.id} todoItem={todo} />
@@ -46,11 +46,11 @@ class TodoList extends Component {
 
     return (
       <div className="todo-list">
+        {this.renderComponent()}
         <AppFooter
           showComponent={this.showComponent}
           todosLeft={todosLeft.length}
         />
-        {this.renderComponent()}
       </div>
     )
   }

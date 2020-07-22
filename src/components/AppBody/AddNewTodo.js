@@ -59,11 +59,15 @@ class AddNewTodo extends Component {
   render() {
     return (
       <div>
-        <Button
-          className="primary"
-          style={{ backgroundColor: `${this.state.categoryColor}` }}
+        <div
+          className="category-box"
+          style={{
+            backgroundColor: `${this.state.categoryColor}`,
+            border: `2.5px solid ${this.state.categoryColor}`,
+          }}
           onClick={this.handleShow}
-        ></Button>
+        ></div>
+
         <Modal show={this.state.show} onHide={this.handleShow} centered>
           <Modal.Body>
             {this.renderCategoryOption()}
