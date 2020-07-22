@@ -40,9 +40,9 @@ class TodoItem extends Component {
   render() {
     const task = this.props.todoItem
     return (
-      <div class="todo-item">
+      <div className="todo-item container">
         <input
-          className="mr-2 checkbox-round"
+          className="checkbox-round"
           type="checkbox"
           value={task.completed}
           checked={task.completed}

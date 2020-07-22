@@ -25,13 +25,13 @@
       "name": "Go to grocery",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
       "name": "Continue working on the assignment",
-      "category": "Assignment",
-      "categoryColor": "#FFAB38",
+      "category": "BBBB",
+      "categoryColor": "indigo",
       "completed": true,
       "id": 5
     },

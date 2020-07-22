@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import { Button } from 'reactstrap'
 import { deleteTodo } from '../../actions'
 import { connect } from 'react-redux'
+import bin from '../../assets/trash-solid.svg'
 
 class DeleteTodo extends Component {
   state = { show: false }
@@ -13,9 +14,8 @@ class DeleteTodo extends Component {
 
   render() {
     return (
-      <div className="inline ml-2">
-        <div class="bin" onClick={this.handleShow}></div>
-
+      <div className="inline">
+        <img src={bin} alt="bin" className="bin" onClick={this.handleShow} />
         <Modal
           dialogClassName="modal-size"
           show={this.state.show}
