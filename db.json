@@ -25,7 +25,7 @@
       "name": "Go to grocery",
       "category": "BBBB",
       "categoryColor": "indigo",
-      "completed": true,
+      "completed": false,
       "id": 4
     },
     {
@@ -46,7 +46,7 @@
       "name": "Green",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": false,
+      "completed": true,
       "id": 8
     }
   ],

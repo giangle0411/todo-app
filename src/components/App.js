@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import AllTodos from './AllTodos'
@@ -17,8 +17,8 @@ class App extends Component {
           <Route path="/" exact component={AllTodos} />
           <Route path="/completed" exact component={CompletedTodos} />
           <Route path="/incompleted" exact component={IncompletedTodos} />
+          <AppFooter todosLeft={todosLeft.length} />
         </BrowserRouter>
-        <AppFooter todosLeft={todosLeft.length} />
       </div>
     )
   }
