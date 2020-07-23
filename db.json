@@ -23,15 +23,15 @@
     },
     {
       "name": "Go to grocery",
-      "category": "Others",
-      "categoryColor": "#42f59e",
+      "category": "BBBB",
+      "categoryColor": "indigo",
       "completed": true,
       "id": 4
     },
     {
       "name": "BTVN",
-      "category": "Homework",
-      "categoryColor": "#38C9FF",
+      "category": "Others",
+      "categoryColor": "#42f59e",
       "completed": false,
       "id": 6
     },

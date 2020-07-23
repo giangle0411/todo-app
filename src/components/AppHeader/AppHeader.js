@@ -6,9 +6,9 @@ import AddNewCategory from './AddNewCategory'
 export default class AppHeader extends Component {
   render() {
     return (
-      <div>
+      <div className="app-header">
         <h1>To-do List</h1>
-        <div>
+        <div className="category-list">
           <CategoryList />
           <AddNewCategory />
         </div>

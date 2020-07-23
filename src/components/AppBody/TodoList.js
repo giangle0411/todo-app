@@ -2,15 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchTodos } from '../../actions'
 import TodoItem from './TodoItem'
-import AppFooter from '../AppFooter'
 
 class TodoList extends Component {
-  state = { component: 'TodoList' }
-
-  showComponent = (componentName) => {
-    this.setState({ component: componentName })
-  }
-
   componentDidMount() {
     this.props.fetchTodos()
   }
@@ -41,18 +34,7 @@ class TodoList extends Component {
   }
 
   render() {
-    const allTodos = this.props.todos
-    const todosLeft = allTodos.filter((t) => t.completed === false)
-
-    return (
-      <div className="todo-list">
-        {this.renderComponent()}
-        <AppFooter
-          showComponent={this.showComponent}
-          todosLeft={todosLeft.length}
-        />
-      </div>
-    )
+    return <div className="todo-list">{this.renderComponent()}</div>
   }
 }
 const mapStateToProps = (state) => {

@@ -58,7 +58,7 @@ class AddNewTodo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-todos">
         <div
           className="category-box"
           style={{
