@@ -23,8 +23,8 @@
     },
     {
       "name": "Go to grocery",
-      "category": "BBBB",
-      "categoryColor": "indigo",
+      "category": "Work",
+      "categoryColor": "#FF3830",
       "completed": false,
       "id": 4
     },
@@ -32,14 +32,14 @@
       "name": "BTVN",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
       "name": "I dont know",
       "category": null,
       "categoryColor": null,
-      "completed": false,
+      "completed": true,
       "id": 7
     },
     {
@@ -48,6 +48,20 @@
       "categoryColor": "#42f59e",
       "completed": true,
       "id": 8
+    },
+    {
+      "name": "This is a very long task that I want it to break into two line, really hope it works, oh the layout please help me",
+      "category": "Self Management",
+      "categoryColor": "#e342f5",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "name": "aaaa",
+      "category": null,
+      "categoryColor": null,
+      "completed": false,
+      "id": 10
     }
   ],
   "category": [
@@ -64,12 +78,7 @@
     {
       "id": 3,
       "name": "Work",
-      "color": "#FF3838"
-    },
-    {
-      "name": "BBBB",
-      "color": "indigo",
-      "id": 4
+      "color": "#FF3830"
     },
     {
       "name": "Others",

@@ -14,8 +14,8 @@ class DeleteTodo extends Component {
 
   render() {
     return (
-      <div className="inline">
-        <img src={bin} alt="bin" className="bin" onClick={this.handleShow} />
+      <div className="bin-wrapper">
+        <img src={bin} className="bin" alt="bin" onClick={this.handleShow} />
         <Modal
           dialogClassName="modal-size"
           show={this.state.show}

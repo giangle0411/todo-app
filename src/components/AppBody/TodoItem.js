@@ -72,8 +72,7 @@ class TodoItem extends Component {
             <AddNewCategory />
           </Modal.Body>
         </Modal>
-        {task.name}
-
+        <div className="task-name">{task.name}</div>
         <DeleteTodo id={task.id} />
       </div>
     )
