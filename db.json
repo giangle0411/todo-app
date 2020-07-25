@@ -11,14 +11,14 @@
       "name": "Watching Netflix",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": true,
+      "completed": false,
       "id": 2
     },
     {
       "name": "Do some coding",
       "category": "Self Management",
       "categoryColor": "#e342f5",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
@@ -60,7 +60,7 @@
       "name": "aaaa",
       "category": null,
       "categoryColor": null,
-      "completed": false,
+      "completed": true,
       "id": 10
     }
   ],

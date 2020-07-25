@@ -12,32 +12,16 @@ class ProgressBar extends Component {
     const completed = allTodos.filter((t) => t.completed === true)
     const percentage = (completed.length / allTodos.length) * 100
 
-    const containerStyles = {
-      height: 50,
-      width: '100%',
-      backgroundColor: '#00000',
-      marginTop: 20,
-    }
-
     const fillerStyles = {
-      height: '100%',
       width: `${percentage}%`,
-      backgroundColor: '#F77062',
-      borderRadius: 'inherit',
-      textAlign: 'right',
-      transition: 'width 1s ease-in-out',
     }
 
-    const labelStyles = {
-      padding: 5,
-      color: 'white',
-      fontWeight: 'semiBold',
-      verticalAlign: 'middle',
-    }
     return (
-      <div style={containerStyles}>
-        <div style={fillerStyles}>
-          <span style={labelStyles}>{`${percentage.toFixed(0)}%`}</span>
+      <div className="progress-container">
+        <div className="progress-bar" style={fillerStyles}>
+          <span className="progress-label">
+            {`${percentage.toFixed(0)}%`} Completed
+          </span>
         </div>
       </div>
     )

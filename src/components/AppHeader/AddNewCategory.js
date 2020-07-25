@@ -5,6 +5,7 @@ import { createCategory } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
 import { Button } from 'reactstrap'
 import CategoryForm from './CategoryForm'
+import add from '../../assets/plus-solid.svg'
 
 class AddNewCategory extends Component {
   state = { show: false }
@@ -25,10 +26,13 @@ class AddNewCategory extends Component {
 
   render() {
     return (
-      <div className="inline ml-3">
-        <Button variant="primary" onClick={this.handleShow}>
-          +
-        </Button>
+      <div className="inline">
+        <img
+          src={add}
+          className="add-category"
+          alt="add"
+          onClick={this.handleShow}
+        />
         <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
             <CategoryForm onSubmit={this.onSubmit} />

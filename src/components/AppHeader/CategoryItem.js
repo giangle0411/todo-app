@@ -27,7 +27,7 @@ class CategoryItem extends Component {
       <div className="inline">
         <button
           type="button"
-          className="btn cat-mg"
+          className="btn cat-item"
           onClick={this.handleShow}
           style={{
             backgroundColor: `${this.props.catItem.color}`,

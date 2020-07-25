@@ -5,7 +5,7 @@ import AddNewTodo from './AppBody/AddNewTodo'
 export default class AllTodos extends Component {
   render() {
     return (
-      <div className="all-todos">
+      <div className="all-todos container-mdm">
         <AddNewTodo />
         <TodoList list="AllTodos" />
       </div>

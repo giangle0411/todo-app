@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     const todosLeft = this.props.todos.filter((t) => t.completed === false)
     return (
-      <div className="container-mdm">
+      <div className="">
         <AppHeader />
         <BrowserRouter>
           <Route path="/" exact component={AllTodos} />

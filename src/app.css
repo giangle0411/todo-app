@@ -8,6 +8,74 @@ h1 {
   font-weight: 300;
 }
 
+.logo {
+  margin-top: 55px;
+}
+
+/*Header*/
+.header-label {
+  text-align: left;
+  font: Bold 50px/61px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 35px;
+}
+
+.app-header {
+  box-shadow: 0px 0px 20px #00000029;
+}
+
+/* Category List */
+.cat-item {
+  height: 40px;
+  margin-right: 13px;
+  margin-bottom: 5px;
+  text-align: left;
+  font: Bold 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+/* Add Category */
+.add-category {
+  margin-left: 5px;
+  cursor: pointer;
+}
+/* Progress Bar */
+.progress-container {
+  height: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 35px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #f77062;
+  border-radius: inherit;
+  text-align: right;
+  transition: width 1s ease-in-out;
+}
+
+.progress-label {
+  color: #ffffff;
+  font-weight: semi-bold;
+  vertical-align: middle;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 20;
+  padding-right: 15px;
+}
+
+/* Add todo */
+.add-todo {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+/* Nav bar */
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -21,8 +89,6 @@ h1 {
   box-shadow: 0px 0px 20px #00000029;
   padding: 0;
 }
-
-/* Nav bar */
 
 .todos-left {
   padding-left: 45px;
@@ -84,7 +150,16 @@ h1 {
   margin-left: 15px;
   position: absolute;
   top: 0px;
+
   max-height: 20px;
+}
+
+.bin:hover {
+  fill: #f77062;
+}
+
+.bin:hover {
+  fill: #f77062;
 }
 
 .bin-wrapper {
@@ -124,10 +199,6 @@ h1 {
 
 .input-align {
   float: right;
-}
-
-.cat-mg {
-  margin-right: 13px;
 }
 
 .modal-content {
