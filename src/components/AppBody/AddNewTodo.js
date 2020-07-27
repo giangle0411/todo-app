@@ -21,7 +21,7 @@ class AddNewTodo extends Component {
   renderNameInput = ({ input, placeholder }) => {
     return (
       <input
-        className="form-control-plaintext input-align"
+        className="form-control-plaintext add-input"
         placeholder={placeholder}
         {...input}
       />
@@ -60,7 +60,7 @@ class AddNewTodo extends Component {
     return (
       <div className="add-todo">
         <div
-          className="category-box"
+          className="addtodo-category-box"
           style={{
             backgroundColor: `${this.state.categoryColor}`,
             border: `2.5px solid ${this.state.categoryColor}`,
@@ -74,7 +74,7 @@ class AddNewTodo extends Component {
             <AddNewCategory />
           </Modal.Body>
         </Modal>
-        <div className="inline form-group ml-2 w-75">
+        <div className="inline form-group">
           <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
             <Field
               name="name"

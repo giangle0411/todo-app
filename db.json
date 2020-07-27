@@ -16,8 +16,8 @@
     },
     {
       "name": "Do some coding",
-      "category": "Self Management",
-      "categoryColor": "#e342f5",
+      "category": "AA",
+      "categoryColor": "Blue",
       "completed": false,
       "id": 3
     },
@@ -25,7 +25,7 @@
       "name": "Go to grocery",
       "category": "Work",
       "categoryColor": "#FF3830",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
@@ -48,13 +48,6 @@
       "categoryColor": "#42f59e",
       "completed": true,
       "id": 8
-    },
-    {
-      "name": "This is a very long task that I want it to break into two line, really hope it works, oh the layout please help me",
-      "category": "Self Management",
-      "categoryColor": "#e342f5",
-      "completed": true,
-      "id": 9
     },
     {
       "name": "aaaa",
@@ -86,8 +79,8 @@
       "id": 5
     },
     {
-      "name": "Self Management",
-      "color": "#e342f5",
+      "name": "BB",
+      "color": "Pink",
       "id": 6
     }
   ]

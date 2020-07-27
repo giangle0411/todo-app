@@ -13,29 +13,27 @@ class CategoryItem extends Component {
     this.setState({ show: !this.state.show })
   }
 
-  handleClose = (dispatch) => {
+  handleClose = () => {
     this.setState({ show: false })
   }
 
-  onSubmit = (formValues, dispatch) => {
+  onSubmit = (formValues) => {
     this.props.editCategory(this.props.catItem.id, formValues)
     this.handleClose()
   }
 
   render() {
     return (
-      <div className="inline">
-        <button
-          type="button"
-          className="btn cat-item"
+      <div className="category-item">
+        <div
+          className="category-container"
           onClick={this.handleShow}
           style={{
             backgroundColor: `${this.props.catItem.color}`,
-            color: 'white',
           }}
         >
-          {this.props.catItem.name}
-        </button>
+          <div className="category-name">{this.props.catItem.name}</div>
+        </div>
         <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
             <CategoryForm

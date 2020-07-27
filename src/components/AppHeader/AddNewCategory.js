@@ -26,13 +26,8 @@ class AddNewCategory extends Component {
 
   render() {
     return (
-      <div className="inline">
-        <img
-          src={add}
-          className="add-category"
-          alt="add"
-          onClick={this.handleShow}
-        />
+      <div className="add-category">
+        <img src={add} alt="add" onClick={this.handleShow} />
         <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
             <CategoryForm onSubmit={this.onSubmit} />
