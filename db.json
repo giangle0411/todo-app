@@ -2,29 +2,29 @@
   "todo": [
     {
       "name": "Eat some noodles",
-      "category": "Homework",
-      "categoryColor": "#38C9FF",
+      "category": "Others",
+      "categoryColor": "#42f59e",
       "completed": true,
       "id": 1
     },
     {
       "name": "Watching Netflix",
-      "category": "Others",
-      "categoryColor": "#42f59e",
+      "category": "Work",
+      "categoryColor": "#FF3830",
       "completed": false,
       "id": 2
     },
     {
       "name": "Do some coding",
-      "category": "AA",
-      "categoryColor": "Blue",
+      "category": "Work",
+      "categoryColor": "#FF3830",
       "completed": false,
       "id": 3
     },
     {
       "name": "Go to grocery",
-      "category": "Work",
-      "categoryColor": "#FF3830",
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
       "completed": true,
       "id": 4
     },
@@ -37,24 +37,24 @@
     },
     {
       "name": "I dont know",
-      "category": null,
-      "categoryColor": null,
+      "category": "ssss",
+      "categoryColor": "brown",
       "completed": true,
       "id": 7
     },
     {
-      "name": "Green",
-      "category": "Others",
-      "categoryColor": "#42f59e",
-      "completed": true,
-      "id": 8
-    },
-    {
       "name": "aaaa",
-      "category": null,
-      "categoryColor": null,
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
       "completed": true,
       "id": 10
+    },
+    {
+      "name": "ssdss",
+      "category": null,
+      "categoryColor": null,
+      "completed": false,
+      "id": 11
     }
   ],
   "category": [
@@ -82,11 +82,6 @@
       "name": "BB",
       "color": "Pink",
       "id": 6
-    },
-    {
-      "name": "ssss",
-      "color": "brown",
-      "id": 7
     }
   ]
 }
