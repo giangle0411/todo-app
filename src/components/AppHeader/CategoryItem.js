@@ -7,7 +7,7 @@ import CategoryForm from './CategoryForm'
 import _ from 'lodash'
 
 class CategoryItem extends Component {
-  state = { show: false }
+  state = { show: false, hover: false }
 
   handleShow = () => {
     this.setState({ show: !this.state.show })
@@ -17,22 +17,42 @@ class CategoryItem extends Component {
     this.setState({ show: false })
   }
 
+  handleHover = () => {
+    this.setState({ hover: !this.state.hover })
+  }
+
   onSubmit = (formValues) => {
     this.props.editCategory(this.props.catItem.id, formValues)
     this.handleClose()
   }
 
   render() {
+    let styleBackground
+    if (this.state.hover) {
+      styleBackground = {
+        backgroundColor: `${this.props.catItem.color}`,
+        color: '#ffffff',
+      }
+    } else {
+      styleBackground = {
+        backgroundColor: 'white',
+        color: 'black',
+      }
+    }
     return (
       <div className="category-item">
         <div
           className="category-container"
           onClick={this.handleShow}
-          style={{
-            backgroundColor: `${this.props.catItem.color}`,
-          }}
+          style={styleBackground}
+          onMouseEnter={this.handleHover}
+          onMouseLeave={this.handleHover}
         >
-          <div className="category-name">{this.props.catItem.name}</div>
+          <div
+            className="category-label"
+            style={{ backgroundColor: `${this.props.catItem.color}` }}
+          ></div>
+          <span className="category-name">{this.props.catItem.name}</span>
         </div>
         <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>

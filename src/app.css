@@ -29,6 +29,12 @@ h1 {
 /* Category List */
 .category-item {
   display: inline-block;
+  vertical-align: top;
+}
+
+.category-label {
+  width: 7px;
+  height: 40px;
 }
 
 /* Category Item */
@@ -38,13 +44,13 @@ h1 {
   margin-bottom: 13px;
   cursor: pointer;
   text-align: center;
+  display: flex;
 }
 
 .category-name {
-  color: #ffffff;
   font: Bold 16px/20px Montserrat;
   padding-right: 17px;
-  padding-left: 17px;
+  padding-left: 10px;
   padding-top: 10px;
 }
 
@@ -52,6 +58,7 @@ h1 {
 .add-category {
   margin-left: 5px;
   cursor: pointer;
+  padding-top: 5px;
   display: inline-block;
 }
 /* Progress Bar */
