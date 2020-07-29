@@ -195,12 +195,7 @@ input::placeholder {
   margin-left: 15px;
   position: absolute;
   top: 0px;
-
   max-height: 20px;
-}
-
-.bin:hover {
-  fill: #f77062;
 }
 
 .bin:hover {
@@ -242,9 +237,66 @@ input::placeholder {
   display: inline-block;
 }
 
+/* Modal */
 .modal-content {
-  width: 325px !important;
-  height: 325px;
+  width: 325px;
+  min-height: 325px;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+/* Category select modal */
+.modal-body .add-category {
+  margin-left: 0;
+}
+
+.category-select-item {
+  display: block;
+}
+
+.modal-body .category-container {
+  margin-bottom: 20px;
+  margin-right: 0px;
+}
+
+/* Delete category modal */
+.modal-button {
+  width: 253px;
+  height: 53px;
+  border-radius: 27px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.modal-button-content {
+  font: 16px/19px Montserrat;
+  padding-top: 17px;
+  font-weight: 600;
+}
+
+.button-delete {
+  margin-bottom: 13px;
+}
+
+.modal-delete .modal-content {
+  padding: 35px;
+}
+
+.modal-delete .modal-body {
+  position: relative;
+}
+.modal-delete .modal-main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container-mdm {

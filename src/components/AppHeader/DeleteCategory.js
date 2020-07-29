@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import { Button } from 'reactstrap'
 import { deleteCategory } from '../../actions'
 import { connect } from 'react-redux'
+import ModalButton from '../Modals/ModalButton'
 
 class DeleteCategory extends Component {
   state = { show: false }
@@ -17,21 +18,28 @@ class DeleteCategory extends Component {
         <Button variant="primary" onClick={this.handleShow}>
           Delete
         </Button>
-        <Modal show={this.state.show} onHide={this.handleShow} centered>
+        <Modal
+          dialogClassName="modal-delete"
+          show={this.state.show}
+          onHide={this.handleShow}
+          centered
+        >
           <Modal.Body>
-            <Button
-              className="mr-3"
-              variant="secondary"
-              onClick={this.handleShow}
-            >
-              Close
-            </Button>
-            <Button
-              variant="primary"
-              onClick={(e) => this.props.deleteCategory(this.props.id)}
-            >
-              Delete this category?
-            </Button>
+            <div className="modal-main-content">
+              <ModalButton
+                content="Delete this category?"
+                backgroundColor="#ff3838"
+                color="#ffffff"
+                action={this.props.deleteCategory.bind(this, this.props.id)}
+              />
+              <ModalButton
+                className="button-close"
+                content="Cancel"
+                backgroundColor="ffffff"
+                color="#ff3838"
+                action={this.handleShow}
+              />
+            </div>
           </Modal.Body>
         </Modal>
       </div>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Modal from 'react-bootstrap/Modal'
-import { Button } from 'reactstrap'
 import { deleteTodo } from '../../actions'
 import { connect } from 'react-redux'
 import bin from '../../assets/trash-solid.svg'
+import ModalButton from '../Modals/ModalButton'
 
 class DeleteTodo extends Component {
   state = { show: false }
@@ -17,27 +17,27 @@ class DeleteTodo extends Component {
       <div className="bin-wrapper">
         <img src={bin} className="bin" alt="bin" onClick={this.handleShow} />
         <Modal
-          dialogClassName="modal-size"
+          dialogClassName="modal-delete"
           show={this.state.show}
           onHide={this.handleShow}
           centered
         >
           <Modal.Body>
-            <div>
-              <Button
-                className="mr-3"
-                variant="secondary"
-                onClick={this.handleShow}
-              >
-                Close
-              </Button>
+            <div className="modal-main-content">
+              <ModalButton
+                content="Delete this task?"
+                backgroundColor="#ff3838"
+                color="#ffffff"
+                action={this.props.deleteTodo.bind(this, this.props.id)}
+              />
+              <ModalButton
+                className="button-close"
+                content="Cancel"
+                backgroundColor="ffffff"
+                color="#ff3838"
+                action={this.handleShow}
+              />
             </div>
-            <Button
-              variant="primary"
-              onClick={(e) => this.props.deleteTodo(this.props.id)}
-            >
-              Delete this task?
-            </Button>
           </Modal.Body>
         </Modal>
       </div>

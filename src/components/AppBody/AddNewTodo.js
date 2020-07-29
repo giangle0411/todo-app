@@ -3,8 +3,8 @@ import { reset, Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { createTodo, fetchCategories } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
-import { Button } from 'reactstrap'
 import AddNewCategory from '../AppHeader/AddNewCategory'
+import CategorySelect from '../Modals/CategorySelect'
 
 class AddNewTodo extends Component {
   state = { show: false, category: null, categoryColor: null }
@@ -31,18 +31,13 @@ class AddNewTodo extends Component {
   renderCategoryOption = () => {
     return this.props.categories.map((cat) => {
       return (
-        <Button
+        <CategorySelect
+          key={cat.id}
+          catItem={cat}
           name="category"
           value={cat.name}
-          key={cat.id}
-          style={{
-            backgroundColor: `${cat.color}`,
-            color: 'white',
-          }}
-          onClick={(e) => this.setCat(cat.name, cat.color)}
-        >
-          {cat.name}
-        </Button>
+          setCat={this.setCat.bind(this, cat.name, cat.color)}
+        />
       )
     })
   }

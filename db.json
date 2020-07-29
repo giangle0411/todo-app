@@ -16,8 +16,8 @@
     },
     {
       "name": "Do some coding",
-      "category": "Work",
-      "categoryColor": "#FF3830",
+      "category": "BB",
+      "categoryColor": "Pink",
       "completed": false,
       "id": 3
     },
@@ -25,7 +25,7 @@
       "name": "Go to grocery",
       "category": "Assignment",
       "categoryColor": "#FFAB38",
-      "completed": true,
+      "completed": false,
       "id": 4
     },
     {
@@ -37,8 +37,8 @@
     },
     {
       "name": "I dont know",
-      "category": "ssss",
-      "categoryColor": "brown",
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
       "completed": true,
       "id": 7
     },
@@ -53,8 +53,22 @@
       "name": "ssdss",
       "category": null,
       "categoryColor": null,
-      "completed": false,
+      "completed": true,
       "id": 11
+    },
+    {
+      "name": "ssss",
+      "category": "Work",
+      "categoryColor": "#FF3830",
+      "completed": true,
+      "id": 12
+    },
+    {
+      "name": "Homework",
+      "category": "Homework",
+      "categoryColor": "#38C9FF",
+      "completed": true,
+      "id": 13
     }
   ],
   "category": [
@@ -82,6 +96,11 @@
       "name": "BB",
       "color": "Pink",
       "id": 6
+    },
+    {
+      "name": "Category",
+      "color": "Blue",
+      "id": 7
     }
   ]
 }

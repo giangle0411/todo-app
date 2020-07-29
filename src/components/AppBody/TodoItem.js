@@ -56,12 +56,7 @@ class TodoItem extends Component {
           onClick={this.handleShow}
         ></div>
 
-        <Modal
-          dialogClassName="modal-size"
-          show={this.state.show}
-          onHide={this.handleShow}
-          centered
-        >
+        <Modal show={this.state.show} onHide={this.handleShow} centered>
           <Modal.Body>
             {this.renderCategoryOption()}
             <AddNewCategory />
