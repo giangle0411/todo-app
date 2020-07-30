@@ -5,6 +5,7 @@ import DeleteTodo from './DeleteTodo'
 import Modal from 'react-bootstrap/Modal'
 import CategorySelect from '../Modals/CategorySelect'
 import AddNewCategory from '../AppHeader/AddNewCategory'
+import CategoryBox from '../AppBody/CategoryBox'
 
 class TodoItem extends Component {
   state = { show: false }
@@ -47,14 +48,13 @@ class TodoItem extends Component {
             })
           }
         />
-        <div
-          className="category-box"
-          style={{
+        <CategoryBox
+          handleShow={this.handleShow}
+          propStyle={{
             backgroundColor: `${task.categoryColor}`,
             border: `2.5px solid ${task.categoryColor}`,
           }}
-          onClick={this.handleShow}
-        ></div>
+        />
 
         <Modal show={this.state.show} onHide={this.handleShow} centered>
           <Modal.Body>

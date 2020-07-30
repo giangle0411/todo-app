@@ -3,7 +3,6 @@ import { reset } from 'redux-form'
 import { connect } from 'react-redux'
 import { createCategory } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
-import { Button } from 'reactstrap'
 import CategoryForm from './CategoryForm'
 import add from '../../assets/plus-solid.svg'
 
@@ -28,16 +27,14 @@ class AddNewCategory extends Component {
     return (
       <div className="add-category">
         <img src={add} alt="add" onClick={this.handleShow} />
-        <Modal show={this.state.show} onHide={this.handleClose} centered>
+        <Modal
+          dialogClassName="modal-add-category"
+          show={this.state.show}
+          onHide={this.handleClose}
+          centered
+        >
           <Modal.Body>
             <CategoryForm onSubmit={this.onSubmit} />
-            <Button
-              className="mr-3"
-              variant="secondary"
-              onClick={this.handleShow}
-            >
-              Close
-            </Button>
           </Modal.Body>
         </Modal>
       </div>

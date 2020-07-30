@@ -28,6 +28,7 @@ class DeleteTodo extends Component {
                 content="Delete this task?"
                 backgroundColor="#ff3838"
                 color="#ffffff"
+                marginBottom="13px"
                 action={this.props.deleteTodo.bind(this, this.props.id)}
               />
               <ModalButton

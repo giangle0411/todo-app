@@ -1,14 +1,71 @@
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
+import CategoryBox from '../AppBody/CategoryBox'
+import categoryCheck from '../../assets/category-check.svg'
+
+//Form Validation
+const required = (value) => (value ? undefined : 'Required')
+const maxLength = (max) => (value) =>
+  value && value.length > max ? `Must be ${max} characters or less` : undefined
+const maxLength15 = maxLength(15)
 
 class CategoryForm extends Component {
-  renderInput = ({ input, label }) => {
+  constructor(props) {
+    super(props)
+
+    this.state = { color: null }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  renderCategoryInput = ({ input, label }) => {
     return (
-      <div className="field">
-        <label>{label}</label>
-        <input className="form-control" {...input} />
+      <div className="name-field">
+        <div className="input-label">{label}</div>
+        <input
+          className="form-control-plaintext add-category-input"
+          {...input}
+        />
       </div>
     )
+  }
+
+  renderColorInput = ({ input, label }) => {
+    return (
+      <div className="color-field">
+        <div className="input-label">{label}</div>
+        <div
+          className="color-display"
+          style={{
+            backgroundColor: `${this.state.color}`,
+            border: `2.5px solid ${this.state.color}`,
+          }}
+        ></div>
+        <CategoryBox
+          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+        />
+        <CategoryBox
+          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+        />
+        <CategoryBox
+          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+        />
+        <CategoryBox
+          propStyle={{ height: '25px', width: '25px', marginRight: '15px' }}
+        />
+
+        <input
+          className="form-control-plaintext color-input"
+          {...input}
+          placeholder="#"
+        />
+      </div>
+    )
+  }
+
+  handleChange(e) {
+    this.setState({ color: e.target.value })
+    console.log(this.state)
   }
 
   onSubmit = (formValues) => {
@@ -21,16 +78,20 @@ class CategoryForm extends Component {
         <div className="form-group">
           <Field
             name="name"
-            component={this.renderInput}
-            label="Category name"
+            component={this.renderCategoryInput}
+            label="CATEGORY NAME"
+            validate={[required, maxLength15]}
           />
           <Field
             name="color"
-            component={this.renderInput}
-            label="Category color"
+            component={this.renderColorInput}
+            label="CATEGORY COLOR"
+            validate={[required]}
+            onChange={this.handleChange}
           />
-          <button type="submit" className="btn btn-primary">
-            Submit
+
+          <button className="submit-button" type="submit">
+            <img src={categoryCheck} alt="category-check" />
           </button>
         </div>
       </form>
@@ -38,19 +99,6 @@ class CategoryForm extends Component {
   }
 }
 
-const validate = (formValues) => {
-  const errors = {}
-  if (!formValues.name) {
-    errors.name = 'You have not put in any new category'
-  }
-  if (!formValues.color) {
-    errors.name = 'You have not put in any category color'
-  }
-
-  return errors
-}
-
 export default reduxForm({
   form: 'categoryForm',
-  validate,
 })(CategoryForm)

@@ -1,17 +1,3 @@
-h1 {
-  font-family: 'Montserrat', sans-serif;
-}
-.heading {
-  font-weight: 700;
-}
-.subheading {
-  font-weight: 300;
-}
-
-.logo {
-  margin-top: 55px;
-}
-
 /*Header*/
 .header-label {
   text-align: left;
@@ -21,21 +7,24 @@ h1 {
   opacity: 1;
   margin-bottom: 35px;
 }
-
 .app-header {
   box-shadow: 0px 0px 20px #00000029;
 }
+.logo {
+  margin-top: 55px;
+}
+/**********************************************************/
 
 /* Category List */
 .category-item {
   display: inline-block;
   vertical-align: top;
 }
-
 .category-label {
   width: 7px;
   height: 40px;
 }
+/**********************************************************/
 
 /* Category Item */
 .category-container {
@@ -46,13 +35,13 @@ h1 {
   text-align: center;
   display: flex;
 }
-
 .category-name {
   font: Bold 16px/20px Montserrat;
   padding-right: 17px;
   padding-left: 10px;
   padding-top: 10px;
 }
+/**********************************************************/
 
 /* Add Category */
 .add-category {
@@ -61,6 +50,8 @@ h1 {
   padding-top: 5px;
   display: inline-block;
 }
+/**********************************************************/
+
 /* Progress Bar */
 .progress-container {
   height: 50px;
@@ -68,7 +59,6 @@ h1 {
   background-color: #ffffff;
   margin-top: 27px;
 }
-
 .progress-bar {
   height: 100%;
   background-color: #f77062;
@@ -76,7 +66,6 @@ h1 {
   text-align: right;
   transition: width 1s ease-in-out;
 }
-
 .progress-label {
   color: #ffffff;
   vertical-align: middle;
@@ -85,6 +74,7 @@ h1 {
   font-size: 20;
   padding-right: 15px;
 }
+/**********************************************************/
 
 /* Add todo */
 .add-todo {
@@ -95,15 +85,6 @@ h1 {
   border-bottom: 2px solid #cccccc;
 }
 
-.addtodo-category-box {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  border: 2.5px solid #cccccc;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
 .add-input {
   text-align: left;
   font: Medium 16px/19px Montserrat;
@@ -112,7 +93,6 @@ h1 {
   width: 650px;
   color: #cccccc;
 }
-
 input::placeholder {
   text-align: left;
   font: Medium 16px/19px Montserrat;
@@ -121,6 +101,7 @@ input::placeholder {
   opacity: 1;
   padding-left: 5px;
 }
+/**********************************************************/
 
 /* Nav bar */
 .navbar {
@@ -170,6 +151,7 @@ input::placeholder {
   color: white;
   text-decoration: none;
 }
+/**********************************************************/
 
 /* todo list */
 
@@ -186,7 +168,6 @@ input::placeholder {
   cursor: pointer;
   margin-right: 15px;
 }
-
 .checkbox-round:checked {
   background-color: #f77062;
 }
@@ -197,32 +178,24 @@ input::placeholder {
   top: 0px;
   max-height: 20px;
 }
-
 .bin:hover {
   fill: #f77062;
 }
-
 .bin-wrapper {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   height: 20px;
 }
-
-.form-group {
-  margin-bottom: 0px;
-}
-
 .category-box {
   height: 20px;
   width: 20px;
-  border: 2.5px solid #cccccc;
   display: inline-flex;
+  border: 2.5px solid #cccccc;
   margin-right: 15px;
   cursor: pointer;
   vertical-align: middle;
 }
-
 .task-name {
   display: inline-block;
   font-family: 'Montserrat';
@@ -232,24 +205,25 @@ input::placeholder {
   max-width: 55%;
   padding-top: 3px;
 }
-
 .inline {
   display: inline-block;
 }
+/**********************************************************/
 
 /* Modal */
 .modal-content {
   width: 325px;
   min-height: 325px;
   border-radius: 40px;
+  border: 0px;
   margin-left: auto;
   margin-right: auto;
   padding: 45px;
 }
-
 .modal-body {
   padding: 0;
 }
+/**********************************************************/
 
 /* Category select modal */
 .modal-body .add-category {
@@ -264,8 +238,9 @@ input::placeholder {
   margin-bottom: 20px;
   margin-right: 0px;
 }
+/**********************************************************/
 
-/* Delete category modal */
+/* Delete modal */
 .modal-button {
   width: 253px;
   height: 53px;
@@ -274,21 +249,17 @@ input::placeholder {
   vertical-align: middle;
   cursor: pointer;
 }
-
 .modal-button-content {
   font: 16px/19px Montserrat;
   padding-top: 17px;
   font-weight: 600;
 }
-
 .button-delete {
   margin-bottom: 13px;
 }
-
 .modal-delete .modal-content {
   padding: 35px;
 }
-
 .modal-delete .modal-body {
   position: relative;
 }
@@ -298,6 +269,83 @@ input::placeholder {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/**********************************************************/
+/* Delete Category */
+.cat-bin {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/**********************************************************/
+
+/* Create Category Modal */
+.input-label {
+  text-align: left;
+  font: Bold 8px/10px Montserrat;
+  letter-spacing: 0px;
+  color: #cccccc;
+  opacity: 1;
+}
+.add-category-input {
+  text-align: left;
+  font: Bold 16px/19px Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+  color: #000000;
+}
+
+.name-field {
+  border-bottom: 2px solid #cccccc;
+  width: 235px;
+}
+
+.color-field .input-label {
+  margin-top: 40px;
+  margin-bottom: 8px;
+  text-align: left;
+  font: Bold 8px/10px Montserrat;
+  letter-spacing: 0px;
+  color: #cccccc;
+  opacity: 1;
+}
+.color-display {
+  height: 25px;
+  width: 111px;
+  border: 2.5px solid #cccccc;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.color-input {
+  text-align: left;
+  font: Bold 16px/19px Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+  color: #000000;
+  width: 78px;
+  display: inline-block;
+  border-bottom: 2px solid #cccccc;
+}
+
+.modal-add-category .modal-content {
+  padding-right: 33px;
+  padding-bottom: 35px;
+}
+.submit-button {
+  background-color: #cccccc;
+  border: 5px black;
+  width: 35px;
+  height: 35px;
+  padding: 0px;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-top: 28px;
+
+  display: block;
+}
+/**********************************************************/
 
 .container-mdm {
   width: 100%;
@@ -316,4 +364,8 @@ input::placeholder {
   overflow: hidden;
   position: relative;
   margin-bottom: 23px;
+}
+
+.form-group {
+  margin-bottom: 0px;
 }

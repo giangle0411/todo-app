@@ -8,6 +8,7 @@ export default class ModalButton extends Component {
         style={{
           backgroundColor: `${this.props.backgroundColor}`,
           color: `${this.props.color}`,
+          marginBottom: `${this.props.marginBottom}`,
         }}
         onClick={(e) => {
           this.props.action()

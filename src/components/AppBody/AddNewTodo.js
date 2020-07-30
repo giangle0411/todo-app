@@ -5,6 +5,7 @@ import { createTodo, fetchCategories } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
 import AddNewCategory from '../AppHeader/AddNewCategory'
 import CategorySelect from '../Modals/CategorySelect'
+import CategoryBox from '../AppBody/CategoryBox'
 
 class AddNewTodo extends Component {
   state = { show: false, category: null, categoryColor: null }
@@ -21,7 +22,7 @@ class AddNewTodo extends Component {
   renderNameInput = ({ input, placeholder }) => {
     return (
       <input
-        className="form-control-plaintext add-input"
+        className="form-control-plaintext  add-input"
         placeholder={placeholder}
         {...input}
       />
@@ -54,14 +55,15 @@ class AddNewTodo extends Component {
   render() {
     return (
       <div className="add-todo">
-        <div
-          className="addtodo-category-box"
-          style={{
+        <CategoryBox
+          handleShow={this.handleShow}
+          propStyle={{
             backgroundColor: `${this.state.categoryColor}`,
             border: `2.5px solid ${this.state.categoryColor}`,
+            display: 'inline-block',
+            marginRight: '10px',
           }}
-          onClick={this.handleShow}
-        ></div>
+        />
 
         <Modal show={this.state.show} onHide={this.handleShow} centered>
           <Modal.Body>

@@ -4,6 +4,7 @@ import { Button } from 'reactstrap'
 import { deleteCategory } from '../../actions'
 import { connect } from 'react-redux'
 import ModalButton from '../Modals/ModalButton'
+import bin from '../../assets/trash-solid.svg'
 
 class DeleteCategory extends Component {
   state = { show: false }
@@ -15,9 +16,13 @@ class DeleteCategory extends Component {
   render() {
     return (
       <div className="inline">
-        <Button variant="primary" onClick={this.handleShow}>
-          Delete
-        </Button>
+        <img
+          src={bin}
+          className="cat-bin"
+          alt="bin"
+          onClick={this.handleShow}
+        />
+
         <Modal
           dialogClassName="modal-delete"
           show={this.state.show}
@@ -30,6 +35,7 @@ class DeleteCategory extends Component {
                 content="Delete this category?"
                 backgroundColor="#ff3838"
                 color="#ffffff"
+                marginBottom="13px"
                 action={this.props.deleteCategory.bind(this, this.props.id)}
               />
               <ModalButton
