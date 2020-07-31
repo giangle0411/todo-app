@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Modal from 'react-bootstrap/Modal'
-import { Button } from 'reactstrap'
 import { deleteCategory } from '../../actions'
 import { connect } from 'react-redux'
 import ModalButton from '../Modals/ModalButton'
@@ -15,7 +14,7 @@ class DeleteCategory extends Component {
 
   render() {
     return (
-      <div className="inline">
+      <div className="delete-category-bin">
         <img
           src={bin}
           className="cat-bin"

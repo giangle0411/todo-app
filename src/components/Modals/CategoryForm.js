@@ -30,6 +30,10 @@ class CategoryForm extends Component {
     )
   }
 
+  changeColorInput(color) {
+    document.getElementById('colorInput').value = color
+  }
+
   renderColorInput = ({ input, label }) => {
     return (
       <div className="color-field">
@@ -41,21 +45,47 @@ class CategoryForm extends Component {
             border: `2.5px solid ${this.state.color}`,
           }}
         ></div>
+
         <CategoryBox
-          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+          propStyle={{
+            height: '25px',
+            width: '25px',
+            marginRight: '18px',
+            backgroundColor: '#38C9FF',
+            border: '2.5px solid #38C9FF',
+          }}
         />
         <CategoryBox
-          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+          propStyle={{
+            height: '25px',
+            width: '25px',
+            marginRight: '18px',
+            backgroundColor: '#FFAB38',
+            border: '2.5px solid #FFAB38',
+          }}
         />
         <CategoryBox
-          propStyle={{ height: '25px', width: '25px', marginRight: '18px' }}
+          propStyle={{
+            height: '25px',
+            width: '25px',
+            marginRight: '18px',
+            backgroundColor: '#FF3838',
+            border: '2.5px solid #FF3838',
+          }}
         />
         <CategoryBox
-          propStyle={{ height: '25px', width: '25px', marginRight: '15px' }}
+          propStyle={{
+            height: '25px',
+            width: '25px',
+            marginRight: '15px',
+            backgroundColor: '#21966B',
+            border: '2.5px solid #21966B',
+          }}
         />
 
         <input
           className="form-control-plaintext color-input"
+          id="colorInput"
           {...input}
           placeholder="#"
         />

@@ -87,9 +87,10 @@
 
 .add-input {
   text-align: left;
-  font: Medium 16px/19px Montserrat;
+  font: 16px/19px Montserrat;
   letter-spacing: 0px;
   opacity: 1;
+  font-weight: 500;
   width: 650px;
   color: #cccccc;
 }
@@ -277,6 +278,15 @@ input::placeholder {
   display: inline-block;
 }
 
+.delete-category-bin {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.edit-category {
+  position: relative;
+}
 /**********************************************************/
 
 /* Create Category Modal */
@@ -292,6 +302,8 @@ input::placeholder {
   font: Bold 16px/19px Montserrat;
   letter-spacing: 0px;
   opacity: 1;
+  padding: 0px;
+  padding-bottom: 8px;
   color: #000000;
 }
 
@@ -313,7 +325,6 @@ input::placeholder {
   height: 25px;
   width: 111px;
   border: 2.5px solid #cccccc;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 
@@ -321,7 +332,6 @@ input::placeholder {
   text-align: left;
   font: Bold 16px/19px Montserrat;
   letter-spacing: 0px;
-  opacity: 1;
   color: #000000;
   width: 78px;
   display: inline-block;
@@ -342,7 +352,6 @@ input::placeholder {
   margin-top: 40px;
   margin-left: 100px;
   margin-top: 28px;
-
   display: block;
 }
 /**********************************************************/

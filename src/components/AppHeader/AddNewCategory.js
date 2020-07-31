@@ -3,7 +3,7 @@ import { reset } from 'redux-form'
 import { connect } from 'react-redux'
 import { createCategory } from '../../actions'
 import Modal from 'react-bootstrap/Modal'
-import CategoryForm from './CategoryForm'
+import CategoryForm from '../Modals/CategoryForm'
 import add from '../../assets/plus-solid.svg'
 
 class AddNewCategory extends Component {

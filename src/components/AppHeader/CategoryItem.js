@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { editCategory, deleteCategory } from '../../actions'
 import DeleteCategory from './DeleteCategory'
 import Modal from 'react-bootstrap/Modal'
-import CategoryForm from './CategoryForm'
+import CategoryForm from '../Modals/CategoryForm'
 import _ from 'lodash'
 
 class CategoryItem extends Component {
@@ -56,11 +56,13 @@ class CategoryItem extends Component {
         </div>
         <Modal show={this.state.show} onHide={this.handleClose} centered>
           <Modal.Body>
-            <CategoryForm
-              onSubmit={this.onSubmit}
-              initialValues={_.pick(this.props.catItem, 'name', 'color')}
-            />
-            <DeleteCategory id={this.props.catItem.id} />
+            <div className="edit-category">
+              <CategoryForm
+                onSubmit={this.onSubmit}
+                initialValues={_.pick(this.props.catItem, 'name', 'color')}
+              />
+              <DeleteCategory id={this.props.catItem.id} />
+            </div>
           </Modal.Body>
         </Modal>
       </div>

@@ -9,59 +9,31 @@
     },
     {
       "name": "Watching Netflix",
-      "category": "Work",
-      "categoryColor": "#FF3830",
-      "completed": true,
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
+      "completed": false,
       "id": 2
     },
     {
       "name": "Do some coding",
-      "category": "Homework",
-      "categoryColor": "#38C9FF",
-      "completed": false,
+      "category": "Work",
+      "categoryColor": "#FF3830",
+      "completed": true,
       "id": 3
     },
     {
       "name": "Go to grocery",
-      "category": "Assignment",
-      "categoryColor": "#FFAB38",
+      "category": "Something",
+      "categoryColor": "Pink",
       "completed": false,
       "id": 4
     },
     {
       "name": "BTVN",
-      "category": "Others",
-      "categoryColor": "#42f59e",
+      "category": "Homework",
+      "categoryColor": "#38C9FF",
       "completed": true,
       "id": 6
-    },
-    {
-      "name": "I dont know",
-      "category": "Assignment",
-      "categoryColor": "#FFAB38",
-      "completed": true,
-      "id": 7
-    },
-    {
-      "name": "aaaa",
-      "category": "aaa",
-      "categoryColor": "#f77062",
-      "completed": true,
-      "id": 10
-    },
-    {
-      "name": "ssdss",
-      "category": null,
-      "categoryColor": null,
-      "completed": true,
-      "id": 11
-    },
-    {
-      "name": "ssss",
-      "category": "Work",
-      "categoryColor": "#FF3830",
-      "completed": true,
-      "id": 12
     },
     {
       "name": "Homework",
@@ -69,13 +41,6 @@
       "categoryColor": "#38C9FF",
       "completed": true,
       "id": 13
-    },
-    {
-      "name": "AAAA",
-      "category": "Assignment",
-      "categoryColor": "#FFAB38",
-      "completed": false,
-      "id": 14
     }
   ],
   "category": [
@@ -100,24 +65,9 @@
       "id": 5
     },
     {
-      "name": "BB",
       "color": "Pink",
+      "name": "Something",
       "id": 6
-    },
-    {
-      "name": "Category",
-      "color": "Blue",
-      "id": 7
-    },
-    {
-      "color": "#f77062",
-      "name": "aaa",
-      "id": 8
-    },
-    {
-      "name": "aaa",
-      "color": "pink",
-      "id": 10
     }
   ]
 }
