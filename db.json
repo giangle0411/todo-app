@@ -11,14 +11,14 @@
       "name": "Watching Netflix",
       "category": "Assignment",
       "categoryColor": "#FFAB38",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "name": "Do some coding",
       "category": "Work",
       "categoryColor": "#FF3830",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {

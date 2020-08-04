@@ -197,8 +197,8 @@ input::placeholder {
   height: 20px;
 }
 .category-box {
-  height: 20px;
-  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
   display: inline-flex;
   border: 2.5px solid #cccccc;
   margin-right: 15px;
@@ -451,9 +451,30 @@ input::placeholder {
     width: 100%;
   }
   /*******************************************************************************/
-
+  /* Todo task */
   .container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  /*******************************************************************************/
+  .navbar {
+    height: 30px;
+  }
+  .todos-left {
+    padding-left: 20px;
+    font: 10px/13px Montserrat;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #f77062;
+  }
+  .nav-buttons {
+    margin-right: 20px;
+  }
+
+  .nav-item {
+    font: Bold 8px/10px Montserrat;
+    letter-spacing: 1.6px;
+    color: #f77062;
+    padding: 10px;
   }
 }
