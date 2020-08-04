@@ -30,7 +30,7 @@
 .category-container {
   height: 40px;
   margin-right: 13px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   cursor: pointer;
   text-align: center;
   display: flex;
@@ -80,9 +80,17 @@
 .add-todo {
   margin-top: 45px;
   margin-bottom: 45px;
+}
+
+.add-todo-inner {
+  width: 100%;
   display: inline-flex;
   align-items: center;
   border-bottom: 2px solid #cccccc;
+}
+
+.add-todo .form-group {
+  width: 100%;
 }
 
 .add-input {
@@ -91,7 +99,7 @@
   letter-spacing: 0px;
   opacity: 1;
   font-weight: 500;
-  width: 650px;
+  width: 100%;
   color: #cccccc;
 }
 input::placeholder {
@@ -356,7 +364,23 @@ input::placeholder {
 }
 /**********************************************************/
 
-.container-mdm {
+.container-body {
+  width: 100%;
+  max-width: 768px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0 auto;
+}
+
+.container-header {
+  width: 100%;
+  max-width: 768px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0 auto;
+}
+
+.container-progress-bar {
   width: 100%;
   max-width: 768px;
   padding-left: 45px;
@@ -377,4 +401,59 @@ input::placeholder {
 
 .form-group {
   margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .container-body {
+    padding: 0;
+    margin: 0;
+  }
+  /* Header */
+  .container-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .logo {
+    margin-top: 40px;
+    height: 10px;
+  }
+  .header-label {
+    text-align: left;
+    font: Bold 30px/37px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+  /*******************************************************************************/
+  .container-progress-bar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .progress-container {
+    height: 30px;
+    margin-top: 5px;
+  }
+  /*******************************************************************************/
+
+  /* Add todo */
+  .add-todo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .add-todo-inner {
+    padding-left: 35px;
+
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+  }
+  /*******************************************************************************/
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

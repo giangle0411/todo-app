@@ -2,9 +2,9 @@
   "todo": [
     {
       "name": "Eat some noodles",
-      "category": "BB",
-      "categoryColor": "Pink",
-      "completed": true,
+      "category": "Others",
+      "categoryColor": "#42f59e",
+      "completed": false,
       "id": 1
     },
     {
@@ -25,7 +25,7 @@
       "name": "Go to grocery",
       "category": "Something",
       "categoryColor": "Pink",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
@@ -41,6 +41,13 @@
       "categoryColor": "#38C9FF",
       "completed": true,
       "id": 13
+    },
+    {
+      "name": "pretty long task that needs to break two or even three lines",
+      "category": null,
+      "categoryColor": null,
+      "completed": false,
+      "id": 14
     }
   ],
   "category": [

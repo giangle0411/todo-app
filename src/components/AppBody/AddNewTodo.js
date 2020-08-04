@@ -22,7 +22,7 @@ class AddNewTodo extends Component {
   renderNameInput = ({ input, placeholder }) => {
     return (
       <input
-        className="form-control-plaintext  add-input"
+        className="form-control-plaintext add-input"
         placeholder={placeholder}
         {...input}
       />
@@ -55,30 +55,32 @@ class AddNewTodo extends Component {
   render() {
     return (
       <div className="add-todo">
-        <CategoryBox
-          handleShow={this.handleShow}
-          propStyle={{
-            backgroundColor: `${this.state.categoryColor}`,
-            border: `2.5px solid ${this.state.categoryColor}`,
-            display: 'inline-block',
-            marginRight: '10px',
-          }}
-        />
+        <div className="add-todo-inner">
+          <CategoryBox
+            handleShow={this.handleShow}
+            propStyle={{
+              backgroundColor: `${this.state.categoryColor}`,
+              border: `2.5px solid ${this.state.categoryColor}`,
+              display: 'inline-block',
+              marginRight: '10px',
+            }}
+          />
 
-        <Modal show={this.state.show} onHide={this.handleShow} centered>
-          <Modal.Body>
-            {this.renderCategoryOption()}
-            <AddNewCategory />
-          </Modal.Body>
-        </Modal>
-        <div className="inline form-group">
-          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-            <Field
-              name="name"
-              component={this.renderNameInput}
-              placeholder="What's needed to be done?"
-            />
-          </form>
+          <Modal show={this.state.show} onHide={this.handleShow} centered>
+            <Modal.Body>
+              {this.renderCategoryOption()}
+              <AddNewCategory />
+            </Modal.Body>
+          </Modal>
+          <div className="form-group">
+            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+              <Field
+                name="name"
+                component={this.renderNameInput}
+                placeholder="What's needed to be done?"
+              />
+            </form>
+          </div>
         </div>
       </div>
     )
