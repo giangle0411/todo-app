@@ -12,10 +12,23 @@ const maxLength15 = maxLength(15)
 class CategoryForm extends Component {
   constructor(props) {
     super(props)
-
-    this.state = { color: null }
+    if (this.props.initialValues !== undefined) {
+      this.state = { color: this.props.initialValues.color }
+    } else {
+      this.state = { color: null }
+    }
 
     this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(e) {
+    this.setState({ color: e.target.value })
+    console.log(this.state)
+    console.log(this.props)
+  }
+
+  onSubmit = (formValues) => {
+    this.props.onSubmit(formValues)
   }
 
   renderCategoryInput = ({ input, label }) => {
@@ -28,10 +41,6 @@ class CategoryForm extends Component {
         />
       </div>
     )
-  }
-
-  changeColorInput(color) {
-    document.getElementById('colorInput').value = color
   }
 
   renderColorInput = ({ input, label }) => {
@@ -93,15 +102,6 @@ class CategoryForm extends Component {
     )
   }
 
-  handleChange(e) {
-    this.setState({ color: e.target.value })
-    console.log(this.state)
-  }
-
-  onSubmit = (formValues) => {
-    this.props.onSubmit(formValues)
-  }
-
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
@@ -131,4 +131,5 @@ class CategoryForm extends Component {
 
 export default reduxForm({
   form: 'categoryForm',
+  enableReinitialize: true,
 })(CategoryForm)

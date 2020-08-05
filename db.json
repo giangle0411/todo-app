@@ -4,7 +4,7 @@
       "name": "Eat some noodles",
       "category": "Others",
       "categoryColor": "#42f59e",
-      "completed": false,
+      "completed": true,
       "id": 1
     },
     {
@@ -18,14 +18,14 @@
       "name": "Do some coding",
       "category": "Work",
       "categoryColor": "#FF3830",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {
       "name": "Go to grocery",
-      "category": "Something",
-      "categoryColor": "Pink",
-      "completed": true,
+      "category": "Assignment",
+      "categoryColor": "#FFAB38",
+      "completed": false,
       "id": 4
     },
     {
@@ -44,10 +44,17 @@
     },
     {
       "name": "pretty long task that needs to break two or even three lines",
+      "category": "Something",
+      "categoryColor": "Pink",
+      "completed": false,
+      "id": 14
+    },
+    {
+      "name": "alo alo",
       "category": null,
       "categoryColor": null,
       "completed": false,
-      "id": 14
+      "id": 16
     }
   ],
   "category": [
