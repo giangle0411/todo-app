@@ -254,6 +254,7 @@ input::placeholder {
   margin-bottom: 20px;
   margin-right: 0px;
 }
+
 /**********************************************************/
 
 /* Delete modal */
@@ -355,6 +356,11 @@ input::placeholder {
 }
 
 .modal-add-category .modal-content {
+  padding-right: 33px;
+  padding-bottom: 35px;
+}
+
+.modal-edit-category .modal-content {
   padding-right: 33px;
   padding-bottom: 35px;
 }
