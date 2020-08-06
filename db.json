@@ -2,8 +2,8 @@
   "todo": [
     {
       "name": "Eat some noodles",
-      "category": "Others",
-      "categoryColor": "#42f59e",
+      "category": "Something",
+      "categoryColor": "Pink",
       "completed": true,
       "id": 1
     },
@@ -18,7 +18,7 @@
       "name": "Do some coding",
       "category": "Work",
       "categoryColor": "#FF3830",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
@@ -30,8 +30,8 @@
     },
     {
       "name": "BTVN",
-      "category": "Homework",
-      "categoryColor": "#38C9FF",
+      "category": "Others",
+      "categoryColor": "#42f3ee",
       "completed": true,
       "id": 6
     },
@@ -46,14 +46,14 @@
       "name": "pretty long task that needs to break two or even three lines",
       "category": "Something",
       "categoryColor": "Pink",
-      "completed": false,
+      "completed": true,
       "id": 14
     },
     {
       "name": "alo alo",
       "category": null,
       "categoryColor": null,
-      "completed": false,
+      "completed": true,
       "id": 16
     }
   ],
@@ -75,7 +75,7 @@
     },
     {
       "name": "Others",
-      "color": "#42f59e",
+      "color": "#42f3ee",
       "id": 5
     },
     {

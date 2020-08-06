@@ -64,15 +64,22 @@
   background-color: #f77062;
   border-radius: inherit;
   text-align: right;
+
   transition: width 1s ease-in-out;
 }
 .progress-label {
   color: #ffffff;
-  vertical-align: middle;
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 20;
   padding-right: 15px;
+}
+
+.progress-label-container {
+  height: 100%;
+  width: 15px;
+  display: inline-block;
+  background-color: turquoise;
 }
 /**********************************************************/
 
@@ -313,6 +320,7 @@ input::placeholder {
   padding: 0px;
   padding-bottom: 8px;
   color: #000000;
+  border: 0px;
 }
 
 .name-field {
@@ -350,6 +358,7 @@ input::placeholder {
   padding-right: 33px;
   padding-bottom: 35px;
 }
+
 .submit-button {
   background-color: #cccccc;
   border: 5px black;
@@ -362,6 +371,7 @@ input::placeholder {
   margin-top: 28px;
   display: block;
 }
+
 /**********************************************************/
 
 .container-body {

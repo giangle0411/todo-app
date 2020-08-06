@@ -19,12 +19,15 @@ class CategoryForm extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.handleColorClick = this.handleColorClick.bind(this)
   }
 
   handleChange(e) {
     this.setState({ color: e.target.value })
-    console.log(this.state)
-    console.log(this.props)
+  }
+
+  handleColorClick(color) {
+    this.setState({ color })
   }
 
   onSubmit = (formValues) => {
@@ -63,6 +66,7 @@ class CategoryForm extends Component {
             backgroundColor: '#38C9FF',
             border: '2.5px solid #38C9FF',
           }}
+          // handleShow={this.handleColorClick('#38C9FF')}
         />
         <CategoryBox
           propStyle={{

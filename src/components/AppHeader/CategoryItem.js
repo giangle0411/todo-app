@@ -54,7 +54,12 @@ class CategoryItem extends Component {
           ></div>
           <span className="category-name">{this.props.catItem.name}</span>
         </div>
-        <Modal show={this.state.show} onHide={this.handleClose} centered>
+        <Modal
+          show={this.state.show}
+          onHide={this.handleClose}
+          dialogClassName="modal-edit-category"
+          centered
+        >
           <Modal.Body>
             <div className="edit-category">
               <CategoryForm
