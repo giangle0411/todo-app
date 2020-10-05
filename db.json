@@ -2,8 +2,8 @@
   "todo": [
     {
       "name": "Eat some noodles",
-      "category": "Something",
-      "categoryColor": "Pink",
+      "category": "Others",
+      "categoryColor": "#42f3ee",
       "completed": true,
       "id": 1
     },
